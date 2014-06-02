@@ -1,0 +1,20 @@
+---
+title: Christoph Rumpel
+layout: default
+page-class: page--home
+---
+
+<section class="wrapper--content">
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            {% for post in paginator.posts %}
+                <article class="blog-article blog-article--preview">
+                    <header class="blog-article__date">{{ post.date | date: "%B %d, %Y" }}</header>
+                    <h1 class="blog-article__title">
+                        <a href="{{ post.url }}">{{ post.title }}</a>
+                    </h1>
+                </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>

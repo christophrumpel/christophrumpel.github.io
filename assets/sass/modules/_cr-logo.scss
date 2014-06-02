@@ -1,0 +1,42 @@
+.cr-logo {
+	position: relative;
+	margin: auto;
+	width: 60px;
+	
+	.cr-logo__circle {
+		transition: background 0.5s;
+		width: 60px;
+		height: 60px;
+		background: #65aa9c;
+		border-radius: 60px;
+		position: relative;
+		overflow: hidden;
+		
+
+		.cr-logo__image {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-top: -17px;
+			margin-left: -21px;
+		}
+
+		.cr-logo__me {
+			position: absolute;
+			top: 150%;
+			left: 50%;
+			margin-top: -30px;
+			margin-left: -30px;
+		}
+
+		&:hover {
+			.cr-logo__image {
+				// transform: translateY(-60px);
+				top: -50%;
+			}
+			.cr-logo__me {
+				top: 50%;
+			}
+		}
+	}
+}

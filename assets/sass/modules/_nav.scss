@@ -1,0 +1,24 @@
+.nav {
+	padding: 0;
+	margin: 0;
+	@include clearfix();
+
+	
+	&.nav--horiz {
+		.nav--horiz__item {
+			float: left;
+			list-style: none;
+		}
+	}
+	
+	&.nav--main {
+		color: $text-light-color;
+		@include x-rem(font-size, 20px);
+		float: left;
+		
+		li {
+			padding: 1rem;
+		}
+	}
+
+}

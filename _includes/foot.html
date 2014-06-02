@@ -1,0 +1,19 @@
+</div>
+<script src="/js/prism.min.js"></script>
+{% if page.codepen %}
+<script async src="http://codepen.io/assets/embed/ei.js"></script>  
+{% endif %}
+{% if page.summary %}
+<script>
+var nav=document.querySelectorAll("article h2");if(nav.length>0){var str="<h2 class='table-of-contents__title'>Table of contents</h2><ul class='table-of-contents__list'>";for(var i=0;i<nav.length;i++){var node=nav.item(i),text=node.innerText,title=text.trim();title=title.substr(0,title.length-1).trim();var frag=document.createDocumentFragment();str+="<li><a href='#"+node.parentNode.getAttribute("id")+"'>"+title+"</a></li>"}str+="</ul>";var date=document.querySelector(".date"),nav=document.createElement("nav"),frag=document.createDocumentFragment();nav.setAttribute("class","table-of-contents");nav.setAttribute("role","navigation");nav.innerHTML=str;frag.appendChild(nav);if(date.nextSibling){date.parentNode.insertBefore(frag,date.nextSibling)}else{date.parentNode.appendChild(frag)}};
+</script>
+{% endif %}
+<script type="text/javascript">var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = "http://engine.carbonads.com/z/24598/azcarbon_2_1_0_HORIZ"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script>
+<script>var _gaq=[['_setAccount','UA-30333387-2'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=true;g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s);}(document,'script'));</script>
+{%if page.comments %}
+<script>var disqus_shortname = 'hugogiraudel';{%if page.disqus %}var disqus_url = "{{ page.disqus }}";{% else %}var disqus_url = "http://hugogiraudel.com{{ page.url }}";{% endif %}var disqus_title = "{{ page.title | escape }}";
+(function(d,t){var dsq=d.createElement(t),s=d.createElement(t);dsq.async=true;dsq.src='http://'+disqus_shortname+'.disqus.com/embed.js';(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(dsq);}(document,'script'));</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus</a>.</noscript>
+{% endif %}
+</body>
+</html>

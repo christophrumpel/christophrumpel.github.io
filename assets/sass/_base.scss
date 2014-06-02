@@ -1,0 +1,70 @@
+*, *:before, *:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html, body {
+	background: $bg-primary-color;
+	font-size: 20px;
+	font-family: 'Ubuntu', 'sans-serif';
+	font-weight: 300;
+	border-top: .3rem solid $brand-color;
+	line-height: 1.5;
+}
+
+a {
+	@extend .animate;
+	color: $brand-color;
+	&:hover {
+		color: $brand-color-darken;
+		text-decoration: none; 
+	}
+}
+
+h1, h2, h3, h4, h5 {
+	color: $brand-color;
+}
+
+p {
+	margin: 0 0 1rem;
+}
+
+// Fonts
+.font-medium {
+	font-weight: 400;
+}
+.font-bold {
+	font-weight: 700;
+}
+
+// Animations
+.animate {
+	transition: .7s ease-out all;
+}
+
+
+// Wrapper
+.wrapper--top-down {
+	padding: 2rem 6rem;
+	@include clearfix();
+	
+
+	
+
+}
+.wrapper--content {
+	padding: 2rem 2rem;
+	@include clearfix();
+	
+	@include respond-to(600) {
+		padding: 2rem 4rem;
+	}
+
+	@include respond-to(800) {
+		padding: 4rem 6rem 0;
+	}
+}
+
+
+
