@@ -46,9 +46,12 @@ p {
 
 // Wrapper
 .wrapper--top-down {
-	padding: 2rem 6rem;
+	padding: 2rem;
 	@include clearfix();
 	
+	@include respond-to(600) {
+		padding: 2rem 4rem;
+	}
 
 	
 

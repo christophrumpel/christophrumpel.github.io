@@ -4429,12 +4429,15 @@ p {
   transition: 0.7s ease-out all; }
 
 .wrapper--top-down {
-  padding: 2rem 6rem; }
+  padding: 2rem; }
   .wrapper--top-down:before, .wrapper--top-down:after {
     content: " ";
     display: table; }
   .wrapper--top-down:after {
     clear: both; }
+  @media only screen and (min-width: 600px) {
+    .wrapper--top-down {
+      padding: 2rem 4rem; } }
 
 .wrapper--content {
   padding: 2rem 2rem; }
