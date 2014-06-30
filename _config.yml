@@ -1,7 +1,8 @@
 name: "christoph-rumpel.com"
 description: "Passionate web-developer and Larave artisan from Vienna "
 exclude: ['README.md', 'sass/']
-paginate: 7
+paginate: 4
+paginate_path: /blog/page/:num
 markdown: redcarpet
-permalink: pretty
+permalink: /:year/:month/:title
 highlighter: pygments

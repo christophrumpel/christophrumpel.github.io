@@ -10,6 +10,30 @@
 			list-style: none;
 		}
 	}
+
+	&.nav--paging {
+		margin: auto;
+		margin-top: 3rem;
+		text-align: center; 
+		li {
+			background-color: #eee;
+			padding: 10px 15px;
+			text-align: center;
+			display: inline-block;
+			width: 160px;
+			&:hover {
+				background-color: #ddd;
+			}
+			&:first-child {
+				margin-right: 10px;  
+			}
+			a {
+				&:hover {
+					background: none;
+				}
+			}
+		}
+	}
 	
 	&.nav--main {
 		color: $text-light-color;

@@ -38,6 +38,10 @@ p {
 	font-weight: 700;
 }
 
+.font-italic {
+	font-style: italic;
+}
+
 // Animations
 .animate {
 	transition: .7s ease-out all;
@@ -52,12 +56,10 @@ p {
 	@include respond-to(600) {
 		padding: 2rem 4rem;
 	}
-
-	
-
 }
+
 .wrapper--content {
-	padding: 2rem 2rem;
+	padding: 2rem 1rem;
 	@include clearfix();
 	
 	@include respond-to(600) {

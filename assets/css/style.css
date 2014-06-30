@@ -224,7 +224,7 @@ a {
     text-decoration: underline; }
   a:focus {
     outline: thin dotted;
-    outline: 5px auto-webkit-focus-ring-color;
+    outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
 
 figure {
@@ -1214,7 +1214,7 @@ select[multiple], select[size] {
 
 input[type="file"]:focus, input[type="radio"]:focus, input[type="checkbox"]:focus {
   outline: thin dotted;
-  outline: 5px auto-webkit-focus-ring-color;
+  outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px; }
 
 output {
@@ -1473,7 +1473,7 @@ textarea.input-lg, .input-group-lg > textarea.form-control, .input-group-lg > te
   user-select: none; }
   .btn:focus, .btn:active:focus, .btn.active:focus {
     outline: thin dotted;
-    outline: 5px auto-webkit-focus-ring-color;
+    outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
   .btn:hover, .btn:focus {
     color: #333;
@@ -2493,9 +2493,6 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
 .btn-group .dropdown-toggle:active, .btn-group.open .dropdown-toggle {
   outline: 0; }
 
-
-
-
 .btn-group > .btn + .dropdown-toggle {
   padding-left: 8px;
   padding-right: 8px; }
@@ -2588,8 +2585,6 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
     float: left;
     width: 100%;
     margin-bottom: 0; }
-
-
 
 .input-group-addon, .input-group-btn, .input-group .form-control {
   display: table-cell; }
@@ -4424,6 +4419,9 @@ p {
 .font-bold {
   font-weight: 700; }
 
+.font-italic {
+  font-style: italic; }
+
 .animate, a {
   -webkit-transition: 0.7s ease-out all;
   transition: 0.7s ease-out all; }
@@ -4440,7 +4438,7 @@ p {
       padding: 2rem 4rem; } }
 
 .wrapper--content {
-  padding: 2rem 2rem; }
+  padding: 2rem 1rem; }
   .wrapper--content:before, .wrapper--content:after {
     content: " ";
     display: table; }
@@ -4464,6 +4462,22 @@ p {
   .nav.nav--horiz .nav--horiz__item {
     float: left;
     list-style: none; }
+  .nav.nav--paging {
+    margin: auto;
+    margin-top: 3rem;
+    text-align: center; }
+    .nav.nav--paging li {
+      background-color: #eee;
+      padding: 10px 15px;
+      text-align: center;
+      display: inline-block;
+      width: 160px; }
+      .nav.nav--paging li:hover {
+        background-color: #ddd; }
+      .nav.nav--paging li:first-child {
+        margin-right: 10px; }
+      .nav.nav--paging li a:hover {
+        background: none; }
   .nav.nav--main {
     color: #fff;
     font-size: 20px;
@@ -4525,10 +4539,14 @@ p {
 .blog-article {
   position: relative; }
   .blog-article .blog-article__title {
-    font-size: 32px;
-    font-size: 2rem;
+    font-size: 24px;
+    font-size: 1.5rem;
     color: #65aa9c;
     margin: 0; }
+    @media only screen and (min-width: 600px) {
+      .blog-article .blog-article__title {
+        font-size: 32px;
+        font-size: 2rem; } }
   .blog-article .blog-article__date {
     font-size: 14px;
     font-size: 0.875rem;
@@ -4541,12 +4559,14 @@ p {
       color: #fff;
       padding: 5px; }
   .blog-article.blog-article--preview {
-    padding: 1.5rem;
+    padding: 1.5rem 0;
     text-align: center;
     border-top: 1px solid #65aa9c; }
     .blog-article.blog-article--preview:first-child {
       padding-top: 0;
       border: none; }
+  .blog-article.blog-article--full header {
+    font-style: italic; }
   .blog-article.blog-article--full time {
     margin-bottom: 0.5rem;
     font-size: 0.8rem;
@@ -4576,6 +4596,8 @@ p {
       content: '"'; }
     .blog-article.blog-article--full blockquote::before {
       content: '"'; }
+  .blog-article.blog-article--full pre {
+    padding: 1rem 2rem; }
 
 /* Solarized Dark 
 

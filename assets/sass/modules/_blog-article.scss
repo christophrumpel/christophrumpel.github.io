@@ -7,9 +7,13 @@
 .blog-article {
 	position: relative;
 	.blog-article__title {
-		@include x-rem(font-size, 32px);
+		@include x-rem(font-size, 24px);
 		color: $brand-color;
 		margin: 0;
+		
+		@include respond-to(600) {
+			@include x-rem(font-size, 32px);
+		}
 	}
 	.blog-article__date {
 		@include x-rem(font-size, 14px);
@@ -26,7 +30,7 @@
 	}
 	
 	&.blog-article--preview {
-		padding: 1.5rem;
+		padding: 1.5rem 0;
 		text-align: center;
 		border-top: 1px solid $brand-color;
 		&:first-child {
@@ -36,6 +40,9 @@
 	}
 
 	&.blog-article--full {
+		header {
+			font-style: italic;
+		}
 		time {
 			margin-bottom: .5rem;
 			font-size: .8rem;
@@ -78,6 +85,10 @@
 			&::before {
 				content: '"';
 			}
+		}
+
+		pre {
+			padding: 1rem 2rem;
 		}
 	}
 }
