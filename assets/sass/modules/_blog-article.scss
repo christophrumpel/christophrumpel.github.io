@@ -18,6 +18,7 @@
 	.blog-article__date {
 		@include x-rem(font-size, 14px);
 		color: $brand-color;
+		margin-bottom: 5px; 
 		
 		&.blog-article__date--fixed {
 			position: absolute;
@@ -42,6 +43,7 @@
 	&.blog-article--full {
 		header {
 			font-style: italic;
+			margin-bottom: 1rem; 
 		}
 		time {
 			margin-bottom: .5rem;

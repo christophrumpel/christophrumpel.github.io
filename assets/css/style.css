@@ -4550,7 +4550,8 @@ p {
   .blog-article .blog-article__date {
     font-size: 14px;
     font-size: 0.875rem;
-    color: #65aa9c; }
+    color: #65aa9c;
+    margin-bottom: 5px; }
     .blog-article .blog-article__date.blog-article__date--fixed {
       position: absolute;
       top: 0;
@@ -4566,7 +4567,8 @@ p {
       padding-top: 0;
       border: none; }
   .blog-article.blog-article--full header {
-    font-style: italic; }
+    font-style: italic;
+    margin-bottom: 1rem; }
   .blog-article.blog-article--full time {
     margin-bottom: 0.5rem;
     font-size: 0.8rem;

@@ -29,7 +29,7 @@ author:
 <h2>Setup</h2>
 <p>Take a fresh Laravel installation and put a folder called assets to your public folder. We are using the exact same file structure like we did the last time with Grunt.</p>
 
-{% highlight PowerShell %}
+{% highlight PowerShell startinline %}
 assets/
     css
     images
@@ -42,7 +42,7 @@ assets/
         ui/
             _base.scss
             _normalize.scss
-{% endhighlight %}
+{% endhighlight startinline %}
 
 <p>Our tasks are the same too:</p>
 <ul>
@@ -54,22 +54,22 @@ assets/
 </ul>
 <p>First we create a package.json file in our assets's root. We need to fill it with an empty object. This is because we will install all the modules with the --save parameter. This will save the module's dependencies right in our package.json file. At the end all our modules will be listed in this file and we have a nice overview of what we are using.</p>
 
-{% highlight JavaScript %}
+{% highlight JavaScript startinline %}
 {}
-{% endhighlight %}
+{% endhighlight startinline %}
 
 <p>Next we need to install Gulp globally and locally.<br />
 Again we are using the --save parameter, because Gulp itself is a module too.</p>
 
-{% highlight PowerShell %}
+{% highlight PowerShell startinline %}
 npm install -g gulp
 npm install --save-dev gulp
-{% endhighlight %}
+{% endhighlight startinline %}
 
 <p>The second file we need is the Gulpfile.js. This is where we create all of our tasks.</p>
 
 
-{% highlight JavaScript %}
+{% highlight JavaScript startinline %}
 // Get modules
 var gulp = require('gulp');
 
@@ -80,7 +80,7 @@ gulp.task('taskname', function() {
 
 // The default task (called when you run `gulp` from cli)
 gulp.task('default', ['']);
-{% endhighlight %}
+{% endhighlight startinline %}
 
 
 <p>We need to define all of the modules that we want to use first. Afterwards we define an empty task and the default tasks. This is what will be triggered when we run the "gulp" command.</p>
@@ -89,14 +89,14 @@ gulp.task('default', ['']);
 <p>The first taks we will create is the Styles task. Here we want to compile our Sass file and save the CSS file in a different directory. This is super easy and when you see the code, you will immedatly notice what is going on.</p>
 <p>We will begin with installing the Sass module. Again, the save parameter will write this new dependency right to our package.json file.</p>
 
-{% highlight PowerShell %}
+{% highlight PowerShell startinline %}
 npm install gulp-sass --save
-{% endhighlight %}
+{% endhighlight startinline %}
 
 <p>Now let's take a look at the task's code. First we use a Gulp API function called src to pick the file. This is one of the major advantages we have with Gulp. Selecting files is something we need to do all the time in our tasks, this is why Gulp is taking care of this action and not the modules.</p>
 <p>Next we take the selected file and we pipe it to another function. This is the Sass module's function we have defined at the top of the Gulpfile. And at the end we take the compiled file and we define a destination which is another Gulp API function. Now we set this task as a default one.</p>
 
-{% highlight JavaScript %}
+{% highlight JavaScript startinline %}
 // Get modules
 var gulp = require('gulp');
 var sass = require('gulp-sass')
@@ -110,28 +110,28 @@ gulp.task('sass', function () {
 
 // The default task (called when you run `gulp` from cli)
 gulp.task('default', ['sass']);
-{% endhighlight %}
+{% endhighlight startinline %}
 
 <p>Three lines of code, everything works and everyone immediately knows what is going on. This is really great! When we now run "gulp" the new CSS file will be created.</p>
 <h2>Task script</h2>
 <p>Gulp modules: <a title="Gulp Uglify Module" href="https://npmjs.org/package/gulp-uglify">gulp-uglify</a>, <a title="Gulp rename module" href="https://npmjs.org/package/gulp-rename">gulp-rename </a></p>
 <p>Next we want to minify our script. Here we need two more modules: one for minifying the file(Uglify) and another to rename the output. Let's install them.</p>
 
-{% highlight PowerShell %}
+{% highlight PowerShell startinline %}
 npm install gulp-uglify --save
 npm install gulp-rename --save
-{% endhighlight %}
+{% endhighlight startinline %}
 
 <p>In our simple assets scenario, we want a single main.js file to be minified. Again we are using the Gulp API methods src and dest. Between those, we pipe the selected file through the uglify and the rename module.</p>
 
-{% highlight JavaScript %}
+{% highlight JavaScript startinline %}
 gulp.task('scripts', function() {
     gulp.src('js/main.js')
         .pipe(uglify())
         .pipe(rename('main.min.js'))
         .pipe(gulp.dest('js'))
 });
-{% endhighlight %}
+{% endhighlight startinline %}
 
 
 <p>This task is very simple too. We can run it with "gulp scripts" or we set it as default like our first one.</p>
@@ -139,55 +139,55 @@ gulp.task('scripts', function() {
 <p>Gulp module: <a title="Gulp imagemin module" href="https://npmjs.org/package/gulp-imagemin">gulp-imagemin</a></p>
 <p>The next task we are going to build will optimize our images. The module we use is called Imagemin.</p>
 
-{% highlight PowerShell %}
+{% highlight PowerShell startinline %}
 npm install gulp-imagemin --save
-{% endhighlight %}
+{% endhighlight startinline %}
 
 <p>Instead of selecting one file, we will select all files within the images-orig folder. Then these images are optimized through the Imagemin module and saved in the destination folder named images.</p>
 
-{% highlight JavaScript %}
+{% highlight JavaScript startinline %}
 gulp.task('images', function () {
     gulp.src('images-orig/*.{png,gif,jpg}')
         .pipe(imagemin())
         .pipe(gulp.dest('images/'));
 });
-{% endhighlight %}
+{% endhighlight startinline %}
 
 <h2>Task watch</h2>
 <p>So far so good. We have all the main tasks created and I'm sure you have recognized the clean and simple way working with Gulp. But like in my <a title="My last Grunt article" href="http://christoph-rumpel.com/2014/01/how-to-laravel-series-two-ways-of-implementing-grunt-to-laravel/">last Grunt article</a> we want to watch our asset files and trigger the right tasks on a change. We handle this with another Gulp API method: watch. Yeah right. We do not need another Gulp module, because watch is a built-in Gulp task.</p>
 <p>Let's take a quick look at the syntax. We are telling the watch method where to look for a change and which task to trigger afterwards.</p>
 
-{% highlight JavaScript %}
+{% highlight JavaScript startinline %}
 gulp.task('watch', function () {
     gulp.watch('sass/**/*.scss', ['styles']);
     gulp.watch('js/**.js', ['scripts']);
     gulp.watch('images-orig/**', ['images']);
 });
-{% endhighlight %}
+{% endhighlight startinline %}
 
 
 <h2>Task livereload</h2>
 <p>Gulp module: <a title="Gulp livereload module" href="https://github.com/vohof/gulp-livereload">gulp-livereload</a></p>
 <p>Our final task will handle the refresh of the browser: livereload.</p>
 
-{% highlight PowerShell %}
+{% highlight PowerShell startinline %}
 npm install --save gulp-livereload
-{% endhighlight %}
+{% endhighlight startinline %}
 
 <p>Don't forget to set the variable for this module after installation, like we did for the other module's as well. We can now pipe livereload to our tasks. Of course you need the livereload browser extension too to make this work!</p>
 
-{% highlight JavaScript %}
+{% highlight JavaScript startinline %}
 gulp.task('styles', function () {
     gulp.src('sass/styles.scss')
         .pipe(sass())
         .pipe(gulp.dest('css'))
         .pipe(livereload());
 });
-{% endhighlight %}
+{% endhighlight startinline %}
 
 <p>Now that you know how to add livereload to a task, you can use it whenever you need it. But there is more. Wouldn't it be great if we could refresh the browser if our Laravel views are changed? Yes! So let's add this too.</p>
 
-{% highlight JavaScript %}
+{% highlight JavaScript startinline %}
 gulp.task('watch', function () {
     var server = livereload();
 
@@ -197,7 +197,7 @@ gulp.task('watch', function () {
     gulp.watch('../../app/views/**/*.php').on('change', function(file) {
     server.changed(file.path);
 });
-{% endhighlight %}
+{% endhighlight startinline %}
 
 <p>We added two things here. First a variable called server. It is used in combination with the on method. We select all PHP files in our views folder and on a change we want to refresh the browser. Additonally we print out the name of the changed file.</p>
 <p>Let's test this right now. Start Gulp with the standard gulp command. Now change the hello.php file which comes with every Laravel installation. When you save the save the browser should reload. (Don't forget to enable the livereload browser extension)</p>
