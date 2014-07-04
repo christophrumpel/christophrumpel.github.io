@@ -11,6 +11,10 @@
 		color: $brand-color;
 		margin: 0;
 		
+		a {
+			text-decoration: none;
+		}
+		
 		@include respond-to(600) {
 			@include x-rem(font-size, 32px);
 		}
@@ -72,6 +76,14 @@
 			&:hover {
 				text-decoration: underline;
 			}
+		}
+
+		figure {
+			@include x-rem(margin-bottom, 20px);
+		}
+
+		figcaption {
+			@include x-rem(font-size, 16px);
 		}
 
 		blockquote {

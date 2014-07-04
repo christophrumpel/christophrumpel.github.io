@@ -9,7 +9,7 @@
  */
 @mixin x-rem($property, $values) {
     // Create a couple of empty lists as output buffers.
-    $base-font-size: 16px; // should be consistent with your html/body font-size
+    $base-font-size: 20px; // should be consistent with your html/body font-size
     $px-values: ();
     $rem-values: ();
  

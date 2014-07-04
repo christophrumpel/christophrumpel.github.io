@@ -4402,16 +4402,27 @@ html, body {
   line-height: 1.5; }
 
 a {
-  color: #65aa9c; }
+  color: #65aa9c;
+  text-decoration: underline; }
   a:hover {
-    color: #457d71;
-    text-decoration: none; }
+    color: #457d71; }
 
 h1, h2, h3, h4, h5 {
   color: #65aa9c; }
 
 p {
   margin: 0 0 1rem; }
+
+pre {
+  color: #888; }
+
+:not(pre) > code {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  white-space: nowrap;
+  border-radius: 4px; }
 
 .font-medium {
   font-weight: 400; }
@@ -4476,12 +4487,14 @@ p {
         background-color: #ddd; }
       .nav.nav--paging li:first-child {
         margin-right: 10px; }
-      .nav.nav--paging li a:hover {
-        background: none; }
+      .nav.nav--paging li a {
+        text-decoration: none; }
+        .nav.nav--paging li a:hover {
+          background: none; }
   .nav.nav--main {
     color: #fff;
     font-size: 20px;
-    font-size: 1.25rem;
+    font-size: 1rem;
     float: left; }
     .nav.nav--main li {
       padding: 1rem; }
@@ -4525,7 +4538,9 @@ p {
   color: #666;
   text-align: center;
   font-size: 12px;
-  font-size: 0.75rem; }
+  font-size: 0.6rem; }
+  .footer--main a {
+    text-decoration: none; }
 
 .list-vertical {
   margin: 0;
@@ -4540,16 +4555,18 @@ p {
   position: relative; }
   .blog-article .blog-article__title {
     font-size: 24px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #65aa9c;
     margin: 0; }
+    .blog-article .blog-article__title a {
+      text-decoration: none; }
     @media only screen and (min-width: 600px) {
       .blog-article .blog-article__title {
         font-size: 32px;
-        font-size: 2rem; } }
+        font-size: 1.6rem; } }
   .blog-article .blog-article__date {
     font-size: 14px;
-    font-size: 0.875rem;
+    font-size: 0.7rem;
     color: #65aa9c;
     margin-bottom: 5px; }
     .blog-article .blog-article__date.blog-article__date--fixed {
@@ -4587,6 +4604,12 @@ p {
     margin-bottom: 1.5rem; }
   .blog-article.blog-article--full a:hover {
     text-decoration: underline; }
+  .blog-article.blog-article--full figure {
+    margin-bottom: 20px;
+    margin-bottom: 1rem; }
+  .blog-article.blog-article--full figcaption {
+    font-size: 16px;
+    font-size: 0.8rem; }
   .blog-article.blog-article--full blockquote {
     font-weight: 400;
     font-style: italic;
@@ -4622,7 +4645,7 @@ green     #859900  operators, other keywords
 pre {
   background-color: transparent;
   font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 0.7rem;
   line-height: 1.8; }
 
 .highlight {

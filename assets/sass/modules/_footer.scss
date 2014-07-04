@@ -4,4 +4,8 @@
 	color: $text-dark-color;
 	text-align: center;
 	@include x-rem(font-size, 12px);
+	
+	a {
+		text-decoration: none;	
+	}
 }
