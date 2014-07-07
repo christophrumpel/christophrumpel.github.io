@@ -4481,8 +4481,8 @@ pre {
       background-color: #eee;
       padding: 5px 10px;
       text-align: center;
-      width: 50%;
-      float: left;
+      width: 45%;
+      display: inline-block;
       font-size: 16px;
       font-size: 0.8rem; }
       .nav.nav--paging li:hover {
@@ -4494,7 +4494,6 @@ pre {
       @media only screen and (min-width: 400px) {
         .nav.nav--paging li {
           padding: 10px 15px;
-          display: inline-block;
           width: 120px;
           float: none;
           font-size: 20px;
