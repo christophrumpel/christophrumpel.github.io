@@ -4632,6 +4632,9 @@ pre {
       content: '"'; }
   .blog-article.blog-article--full pre {
     padding: 1rem 2rem; }
+  .blog-article.blog-article--full img {
+    width: 100%;
+    height: auto; }
 
 /* Solarized Dark 
 
