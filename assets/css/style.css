@@ -4479,18 +4479,28 @@ pre {
     text-align: center; }
     .nav.nav--paging li {
       background-color: #eee;
-      padding: 10px 15px;
+      padding: 5px 10px;
       text-align: center;
-      display: inline-block;
-      width: 160px; }
+      width: 50%;
+      float: left;
+      font-size: 16px;
+      font-size: 0.8rem; }
       .nav.nav--paging li:hover {
         background-color: #ddd; }
-      .nav.nav--paging li:first-child {
-        margin-right: 10px; }
       .nav.nav--paging li a {
         text-decoration: none; }
         .nav.nav--paging li a:hover {
           background: none; }
+      @media only screen and (min-width: 400px) {
+        .nav.nav--paging li {
+          padding: 10px 15px;
+          display: inline-block;
+          width: 120px;
+          float: none;
+          font-size: 20px;
+          font-size: 1rem; }
+          .nav.nav--paging li:first-child {
+            margin-right: 10px; } }
   .nav.nav--main {
     color: #fff;
     font-size: 20px;

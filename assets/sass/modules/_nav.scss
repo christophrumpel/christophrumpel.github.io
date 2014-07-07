@@ -17,20 +17,29 @@
 		text-align: center; 
 		li {
 			background-color: #eee;
-			padding: 10px 15px;
+			padding: 5px 10px;
 			text-align: center;
-			display: inline-block;
-			width: 160px;
+			width: 50%;
+			float: left;
+			@include x-rem(font-size, 16px);
 			&:hover {
 				background-color: #ddd;
-			}
-			&:first-child {
-				margin-right: 10px;  
 			}
 			a {
 				text-decoration: none;
 				&:hover {
 					background: none;
+				}
+			}
+			@include respond-to(400) {
+				padding: 10px 15px;
+				display: inline-block;
+				width: 120px;
+				float: none;
+				@include x-rem(font-size, 20px);
+				
+				&:first-child {
+					margin-right: 10px;  
 				}
 			}
 		}
