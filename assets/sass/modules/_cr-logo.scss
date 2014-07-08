@@ -23,8 +23,8 @@
 
 		.cr-logo__me {
 			position: absolute;
-			top: 150%;
-			left: 50%;
+			top: 50%;
+			left: 150%;
 			margin-top: -30px;
 			margin-left: -30px;
 		}
@@ -32,10 +32,10 @@
 		&:hover {
 			.cr-logo__image {
 				// transform: translateY(-60px);
-				top: -50%;
+				left: -50%;
 			}
 			.cr-logo__me {
-				top: 50%;
+				left: 50%;
 			}
 		}
 	}
