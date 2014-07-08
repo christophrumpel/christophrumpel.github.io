@@ -73,6 +73,8 @@ pre {
 
 .wrapper--content {
 	padding: 2rem 1rem;
+	margin: auto;
+	float: none;
 	@include clearfix();
 	
 	@include respond-to(600) {
