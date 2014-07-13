@@ -2023,26 +2023,43 @@ pre {
       padding-top: 0;
       border: none; }
   .blog-article.blog-article--full header {
-    font-style: italic;
+    font-weight: 400;
+    margin-bottom: 20px;
     margin-bottom: 1rem; }
   .blog-article.blog-article--full time {
+    margin-bottom: 10px;
     margin-bottom: 0.5rem;
+    font-size: 16px;
     font-size: 0.8rem;
     text-align: center;
     display: block; }
   .blog-article.blog-article--full h1 {
-    margin-bottom: 2rem;
-    margin-top: 0;
+    margin: 0 0 40px 0;
+    margin: 0 0 2rem 0;
     border-bottom: 2px solid #65aa9c;
+    padding-bottom: 10px;
     padding-bottom: 0.5rem;
     text-align: center; }
   .blog-article.blog-article--full h2 {
+    margin: 40px 0 20px;
     margin: 2rem 0 1rem; }
+  .blog-article.blog-article--full h3 {
+    font-size: 24px;
+    font-size: 1.2rem;
+    margin-top: 30px;
+    margin-top: 1.5rem; }
   .blog-article.blog-article--full ul {
+    padding: 0 20px;
     padding: 0 1rem;
+    margin-bottom: 30px;
     margin-bottom: 1.5rem; }
-  .blog-article.blog-article--full a:hover {
-    text-decoration: underline; }
+  .blog-article.blog-article--full a {
+    text-decoration: none; }
+    .blog-article.blog-article--full a:hover {
+      text-decoration: underline; }
+  .blog-article.blog-article--full small {
+    font-size: 16px;
+    font-size: 0.8rem; }
   .blog-article.blog-article--full figure {
     margin-bottom: 20px;
     margin-bottom: 1rem; }
@@ -2054,13 +2071,16 @@ pre {
     font-style: italic;
     text-align: center;
     background: #eee;
+    margin-bottom: 30px;
     margin-bottom: 1.5rem;
+    padding: 40px;
     padding: 2rem; }
     .blog-article.blog-article--full blockquote::after {
       content: '"'; }
     .blog-article.blog-article--full blockquote::before {
       content: '"'; }
   .blog-article.blog-article--full pre {
+    padding: 20px 40px;
     padding: 1rem 2rem; }
   .blog-article.blog-article--full img {
     width: 100%;

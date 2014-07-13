@@ -45,36 +45,46 @@
 
 	&.blog-article--full {
 		header {
-			font-style: italic;
-			margin-bottom: 1rem; 
+			font-weight: 400; 
+			@include x-rem(margin-bottom, 20px);
 		}
 		time {
-			margin-bottom: .5rem;
-			font-size: .8rem;
+			@include x-rem(margin-bottom, 10px);
+			@include x-rem(font-size, 16px);
 			text-align: center;
 			display: block;  
 		}
 		h1 {
-			margin-bottom: 2rem;
-			margin-top: 0;
+			@include x-rem(margin, 0 0 40px 0);
 			border-bottom: 2px solid $brand-color;
-			padding-bottom: .5rem;
+			@include x-rem(padding-bottom, 10px);
 			text-align: center;
 		}
 
 		h2 {
-			margin: 2rem 0 1rem;
+			@include x-rem(margin, 40px 0 20px);
+		}
+
+		h3 {
+			@include x-rem(font-size, 24px);
+			@include x-rem(margin-top, 30px);
+			
 		}
 
 		ul {
-			padding: 0 1rem;
-			margin-bottom: 1.5rem;
+			@include x-rem(padding, 0 20px);
+			@include x-rem(margin-bottom, 30px);
 		}
 
 		a {
+			text-decoration: none;
 			&:hover {
 				text-decoration: underline;
 			}
+		}
+
+		small {
+			@include x-rem(font-size, 16px);
 		}
 
 		figure {
@@ -90,8 +100,8 @@
 			font-style: italic;
 			text-align: center;
 			background: #eee;
-			margin-bottom: 1.5rem;
-			padding: 2rem;
+			@include x-rem(margin-bottom, 30px);
+			@include x-rem(padding, 40px);
 			&::after {
 				content: '"';
 			}
@@ -101,7 +111,7 @@
 		}
 
 		pre {
-			padding: 1rem 2rem;
+			@include x-rem(padding, 20px 40px);
 		}
 
 		img {
