@@ -1,28 +1,29 @@
 ---
 layout: post
-title: "Podcasts - a developer's best friend"
+title: "Podcast - a developer's best friend"
 ---
-<header>Today you will find podcasts everywhere. You can think of them as little radio episodes on the Internet where you can decide when and where you want to hear them. They are easy to record, publish and available for everyone. About a year ago I started to listen to podcasts about web development and I would like to share my experiences as well as my favourite ones with you today.</header>
+<header>Today you will find podcasts everywhere. You can think of them as little radio episodes on the Internet that you can listen to whenever and wherever you choose to. They are easy to record, easy to publish and available for everyone. About a year ago I started listening to podcasts about web development and today I would like to share with you my experiences as well as my favorite ones.</header>
 
 ##Introduction
 
-I have to admit I wasn't always fond of podcasts. As a web developer you have to read a lot of blog articles and watch tutorials or conference talks, `but I never saw any reasons why I should listen to people who I can't see`. Additionally I wasn't sure `when I should do that.
+I have to admit I wasn't always fond of podcasts. As a web developer you have to read a lot of blog articles and watch tutorials or conference talks, but I never saw any reasons why I should listen to people who I can't see. Additionally I wasn't sure `when I should do that.
 
 > A podcast (or netcast) is a digital medium consisting of an episodic series of audio, video, PDF, or ePub files subscribed to and downloaded through web syndication or streamed online to a computer or mobile device.(Wikipedia)
 
-The first turning point for me was when my friend [Stefan Baumgartner](https://twitter.com/ddprrt) told me that he was asked to join the [Working Draft Podcast Team](https://twitter.com/ddprrt), which I haven't heard of before that time. So I decided to give it a chance and after the first episode I was immediately convinced about the benefits of good podcasts.
+The first turning point for me was when my friend [Stefan Baumgartner](https://twitter.com/ddprrt) told me that he was asked to join the [Working Draft Podcast Team](https://twitter.com/ddprrt), which I haven't heard of before at that time. I decided to give it a chance and after the first episode I was immediately convinced about the benefits of good podcasts.
 
-First problem solved, but what about the `when`? The most obvious time to spend on listen to podcasts was on my way to work and home. Especially when you're still tired in the morning it is much easier to listen then to read. But there were soon other situations too like while doing the laundry, driving long distances or while doing workout. It's like killing two birds with one stone.
+First problem solved, but what about the when? The most obvious time to spend on listening to podcasts was on my way to work and back. Especially when you're still tired in the morning it is much easier to listen then to read. But soon there were other situations like during doing the laundry, driving long distances or during working out where listening to podcast was possible. It's like killing two birds with one stone.
 
 ##My favourite podcasts
 
-I am a fullstack developer and therefor it was hard for me to find podcasts that fits my needs. It took me some time, but now I got a nice set of podcasts and I'd like to share them with you.
+I am a fullstack developer and therefore it was hard for me to find podcasts that fit my needs. It took me some time, but now I got a nice set of podcasts that I'd like to share with you.
 
 
 ###Workingdraft(German)
-As I already mentioned, this was the first podcast I have ever listened to and it is still my favourite one. They mostly talk about front-end stuff and about their experiences at work or private projects. They are always up-to-date and give me a great roundup on what is going on right now. But they also have a lot of exciting guests and it is great to listen to their stories.
 
-I have had the pleasure of talking about the [Laravel PHP Framework](http://laravel.com/) in episode [147](http://workingdraft.de/147/) too and I already met some of the hosts at the [beyond tellerrand conference](http://beyondtellerrand.com/). It is one of the podcasts where I really listen to every new episode and I can totally recommend this one.
+As I already mentioned, this was the first podcast I have ever listened to and it is still my favourite one. They mostly talk about front-end stuff and their experiences at work or private projects. They are always up-to-date and provide me with a great roundup on what is going on right now. But they also have a lot of exciting guests and it is great to listen to their stories.
+
+I have had the pleasure of talking about the Laravel PHP Framework in [147](http://workingdraft.de/147/) too and I already met some of the hosts at the [beyond tellerrand conference](http://beyondtellerrand.com/). It is one of the podcasts where I really listen to every new episode and I can highly recommend this one.
 
 <small>Twitter: [https://twitter.com/workingdraft](https://twitter.com/workingdraft)<br />
 Website: [http://workingdraft.de/](http://workingdraft.de/)<br />
@@ -30,7 +31,7 @@ Website: [http://workingdraft.de/](http://workingdraft.de/)<br />
 
 ###Laravel.io(English)
 
-Since I am a huge fan of the [Laravel PHP Framework](http://laravel.com/), I love to hear about all the stuff regarding it. Shawn McCool is the man behind  [Laravel.io](http://laravel.io) and the host of its podcast. He always has great guests like the creator of Laravel or some of its awesome contributors. So if you are working with Laravel check this out!
+Since I am a huge fan of the [Laravel PHP Framework](http://laravel.com/), I love to hear everything to do with it. Shawn McCool is the man behind [Laravel.io](http://laravel.io) and the host of its podcast. He always has great guests like the creator of Laravel or some of its awesome contributors. So if you are working with Laravel, check it out!
 
 <small>Twitter: [https://twitter.com/LaravelIO](https://twitter.com/LaravelIO)<br />
 Website: [http://www.buzzsprout.com/11908](http://www.buzzsprout.com/11908)</small>
@@ -45,7 +46,7 @@ Some weeks ago I came across the [Three Devs and a Maybe](http://threedevsandama
 
 ###Donau Tech Radio(German)
 
-And last but not least there is the [Donau Tech Radio](http://dtr.fm/). This is an Austrian tech podcast and probably the funniest I have ever listened too. They mostly cover web and software development topics, as well as news regarding the whole web.
+And last but not least there is the [Donau Tech Radio](http://dtr.fm/). This is an Austrian tech podcast and probably the funniest I have ever listened too. They mostly cover web and software development topics, as well as news regarding the web as a whole.
 
 <small>Twitter: [https://twitter.com/dtrfm](https://twitter.com/dtrfm)<br />
 Website: [http://dtr.fm/](http://dtr.fm/)</small>
@@ -54,4 +55,4 @@ Website: [http://dtr.fm/](http://dtr.fm/)</small>
 
 ##Conclusion
 
-Let's face it. Podcasts are damn useful and there is enough time for them in you life. So save your excuses and start listening today! If you already have your own favourites, please let me know about them.
+Let's face it. Podcasts are damn useful and there is enough time for them in your life. So save your excuses and start listening today! If you already have your own favourites, please share them with me.
