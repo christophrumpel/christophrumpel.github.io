@@ -6,7 +6,7 @@ title: "Podcast - a developer's best friend"
 
 ##Introduction
 
-I have to admit I wasn't always fond of podcasts. As a web developer you have to read a lot of blog articles and watch tutorials or conference talks, but I never saw any reasons why I should listen to people who I can't see. Additionally I wasn't sure `when I should do that.
+I have to admit I wasn't always fond of podcasts. As a web developer you have to read a lot of blog articles and watch tutorials or conference talks, but I never saw any reasons `why` I should listen to people who I can't see. Additionally I wasn't sure `when` I should do that.
 
 > A podcast (or netcast) is a digital medium consisting of an episodic series of audio, video, PDF, or ePub files subscribed to and downloaded through web syndication or streamed online to a computer or mobile device.(Wikipedia)
 
