@@ -10,13 +10,18 @@ page-class: page--home
             {% for post in paginator.posts %}
                 <article class="blog-article blog-article--preview{% if post.external_url %} blog-article--external-preview{% endif %}">
                     <header class="blog-article__date">{{ post.date | date: "%B %d, %Y" }}</header>
-                    <h1 class="blog-article__title">
-                        {% if post.external_url %}
-                            <a href="{{ post.external_url }}">{{ post.title }}</a>
-                        {% else %}
-                            <a href="{{ post.url }}">{{ post.title }}</a>
-                            {% endif %}
-                    </h1>
+                    {% if post.external_url %}
+                        <a href="{{ post.external_url }}">
+                            <div class="external-preview__sign-wrapper">
+                                <span>&#10095;</span>
+                            </div>
+                    {% else %}
+                        <a href="{{ post.url }}">
+                    {% endif %}
+                        <h1 class="blog-article__title">
+                            {{ post.title }}
+                        </h1>
+                    </a>
                 </article>
             {% endfor %}
         </div>

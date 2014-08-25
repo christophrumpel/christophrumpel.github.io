@@ -5,14 +5,21 @@
 
 .blog-article {
 	position: relative;
+	a, a h1, a span {
+		@extend .animate;
+		color: $brand-color;
+		text-decoration: none;
+		&:hover {
+			color: $brand-color-darken;
+		}
+	}
+
 	.blog-article__title {
 		@include x-rem(font-size, 24px);
 		color: $brand-color;
 		margin: 0;
 		
-		a {
-			text-decoration: none;
-		}
+		
 		
 		@include respond-to(600) {
 			@include x-rem(font-size, 32px);
@@ -40,6 +47,29 @@
 		&:first-child {
 			padding-top: 0;
 			border: none;
+		}
+	}
+
+
+	&.blog-article--external-preview {
+		padding-right: 2rem;
+		.external-preview__sign-wrapper {
+			position: absolute;
+			top: 0;
+			right: 0;
+			height: 100%;
+			@include x-rem(width, 40px);
+			background: $brand-color;
+			
+			span {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin-top: -30px;
+				margin-left: -10px;
+				@include x-rem(font-size, 40px);
+				color: #fff;  
+			}
 		}
 	}
 
