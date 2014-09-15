@@ -13,7 +13,7 @@ page-class: page--home
                     {% if post.external_url %}
                         <a href="{{ post.external_url }}">
                             <div class="external-preview__sign-wrapper">
-                                <span>&#10095;</span>
+                                <img class="external-preview__arrow" src="/assets/images/arrow.png" alt="Extern Link Arrow" />
                             </div>
                     {% else %}
                         <a href="{{ post.url }}">

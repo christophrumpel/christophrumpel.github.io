@@ -71,6 +71,16 @@
 				color: #fff;  
 			}
 		}
+
+		.external-preview__arrow {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 1rem;
+			height: auto;
+			margin-left: -0.5rem;
+			margin-top: -50%;
+		}
 	}
 
 	&.blog-article--full {

@@ -2044,6 +2044,14 @@ pre {
         font-size: 40px;
         font-size: 2rem;
         color: #fff; }
+    .blog-article.blog-article--external-preview .external-preview__arrow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 1rem;
+      height: auto;
+      margin-left: -0.5rem;
+      margin-top: -50%; }
   .blog-article.blog-article--full header {
     font-weight: 400;
     margin-bottom: 20px;
