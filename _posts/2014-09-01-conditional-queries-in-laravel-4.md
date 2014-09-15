@@ -14,7 +14,7 @@ $color = 'red';
 
 $searchResults = DB::table('awesome_products')
 	->where('category', $category)
-	->where('color', $red)
+	->where('color', $color)
 	->get();
 
 {% endhighlight startinline %}
@@ -26,7 +26,7 @@ if(isset($category) && isset($color)) {
 
 	$searchResults = DB::table('awesome_products')
 		->where('category', $category)
-		->where('color', $red)
+		->where('color', $color)
 		->get();
 
 } eleseif(isset($category)) {
