@@ -13,7 +13,7 @@ In Open Source projects like Laravel everyone is able to contribute. On GitHub t
 	<li>Open an issue</li>
 </ul>
 
-When you know how to fix the bug yourself you can fork the repositiory, fix the bug and send a PR. Or it is possible to send a PR with failing unit tests to show the problem.
+When you know how to fix the bug yourself you can fork the repository, fix the bug and send a PR. Or it is possible to send a PR with failing unit tests to show the problem.
 
 If you can't write unit tests or fix it yourself you can submit an issue to report it.
 The second way seems very handy, but can get a pain in the ass and hard to maintain. This is because the person who wants to help you has to `recreate the issue` in order to fix it and this takes most of the time.
@@ -21,13 +21,13 @@ In a perfect world you wouldn't have to explain your bug just with words. You co
 
 ###Welcome Liferaft
 
-Liferaft is a `Symfony console application` for submitting bug reposrts to the Laravel framework. It helps you to fork Laravel to get a fresh installation locally where you can recreate the bug. Then it can automatically send a PR.
-Your demo application will live on your GitHub account and maintainers can grab that in order to find the bug. There is a Liferaft Readme file where you can explain the steps to recrerate the issue. This is so much better than before!
+Liferaft is a `Symfony console application` for submitting bug reports to the Laravel framework. It helps you to fork Laravel to get a fresh installation locally where you can recreate the bug. Then it can automatically send a PR.
+Your demo application will live on your GitHub account and maintainers can grab that in order to find the bug. There is a Liferaft Readme file where you can explain the steps to recreate the issue. This is so much better than before!
 
-Of course this is not as easy as writing an issue on GitHub but that's a benefit. People tend to write them without providing enough information or without trying to fix it themself before submitting. Liferaft forces people to think about their issues before submitting them and if they do, they have to provide all the information they should.
+Of course this is not as easy as writing an issue on GitHub but that's a benefit. People tend to write them without providing enough information or without trying to fix it themselves before submitting. Liferaft forces people to think about their issues before submitting them and if they do, they have to provide all the information they should.
 
 ###Conclusion
 
 With Liferaft there are no more GitHub issues for Laravel anymore. Everything is contributed by PR which makes it so much easier to maintain the project. Taylor and his little helpers will get better information about the bugs and more time to concentrate on new features.
-Make sure to checkout this [free screencast](https://laracasts.com/lessons/introducing-laravel-liferaft) by Taylor Otwell on Laracasts where he introdces Liferaft.
+Make sure to checkout this [free screencast](https://laracasts.com/lessons/introducing-laravel-liferaft) by Taylor Otwell on Laracasts where he introduces Liferaft.
 
