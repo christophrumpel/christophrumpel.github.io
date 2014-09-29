@@ -52,7 +52,8 @@
 
 
 	&.blog-article--external-preview {
-		padding-right: 2rem;
+      @include x-rem(padding-right, 60px);
+      @include x-rem(padding-left, 60px);
 		.external-preview__sign-wrapper {
 			position: absolute;
 			top: 0;

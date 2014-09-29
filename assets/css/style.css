@@ -2026,7 +2026,10 @@ pre {
       padding-top: 0;
       border: none; }
   .blog-article.blog-article--external-preview {
-    padding-right: 2rem; }
+    padding-right: 60px;
+    padding-right: 3rem;
+    padding-left: 60px;
+    padding-left: 3rem; }
     .blog-article.blog-article--external-preview .external-preview__sign-wrapper {
       position: absolute;
       top: 0;
