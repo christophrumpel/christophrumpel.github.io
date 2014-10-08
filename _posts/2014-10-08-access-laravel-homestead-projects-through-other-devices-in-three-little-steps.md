@@ -72,5 +72,5 @@ vagrant reload --provison
 
 ###Conclusion
 
-You will see that you are now able to access your local Homestead project through all you local devices with the new URL ´http://local.laravel5_tests.app.10.0.1.11.xip.io:8000´. This is perfect for testing on a mobile device. Have fun!
+You will see that you are now able to access your local Homestead project through all you local devices with the new URL `http://local.laravel5_tests.app.10.0.1.11.xip.io:8000`. This is perfect for testing on a mobile device. Have fun!
 
