@@ -45,7 +45,7 @@ This is because our local machine does not know how to resolute the new domain.
 Let's add a hosts entry to solve that.
 
 {% highlight PowerShell startinline %}
-127.0.0.1 http://local.laravel5_tests.app.10.0.1.11.xip.io:8000
+127.0.0.1 http://local.laravel5_tests.app.10.0.1.11.xip.io
 {% endhighlight startinline %}
 
 Now our created URL points to our virtual machine and there is only one more thing we need to do.
