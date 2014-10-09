@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Access Laravel Homestead projects through other devices in three little steps"
+article_description: "Working with virtual machines like Homestead..."
 ---
 
 <header>Working with virtual machines like Homestead (which is a Vagrant machine) is perfect. You can fit your environment for your project needs and Homestead is perfect for Laravel. But there is one downside too.
