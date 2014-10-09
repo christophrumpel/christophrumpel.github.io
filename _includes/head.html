@@ -8,12 +8,16 @@
         <meta property="og:image" content="http://christoph-rumpel.com/assets/images/me.png">
         {% if page.article_description %}
         <meta name="description" content="{{ page.article_description }}">
+        <meta name="og:description" content="{{ page.article_description }}">
         <meta property="og:type" content="article"/>
         <meta property="og:url" content="{{ page.url }}"/>
+        <meta property="og:title" content="{{ page.title }}"/>
         {% else %}
         <meta name="description" content="{{ site.description }}">
+        <meta name="og:description" content="{{ site.description }}">
         <meta property="og:type" content="website" />
         <meta property="og:url" content="{{ site.url }}"/>
+        <meta property="og:title" content="{{ site.name }}"/>
         {% endif %}
         <link rel="icon" href="/favicon.png">
         <title>Christoph Rumpel</title>
