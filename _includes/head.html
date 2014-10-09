@@ -1,19 +1,27 @@
 <!DOCTYPE html>
-			 
-<html lang-"en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="robots" content="index,follow">
-		<meta name="description" content="Passionate web-developer and Laravel artisan from Vienna">
-		<meta property="og:image" content="http://christoph-rumpel.com/assets/images/me.png">
-		<meta property="og:url" content="http://christoph-rumpel.com" />
-		<link rel="icon" href="/favicon.png">
-		<title>Christoph Rumpel</title>
-		<!--[if lt IE 9]>
-	  		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
-		<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700,500italic' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" type="text/css" href="/assets/css/style.min.css">
-	</head>
-	<body>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="robots" content="index,follow">
+        <meta property="og:image" content="http://christoph-rumpel.com/assets/images/me.png">
+        {% if page.article_description %}
+        <meta name="description" name="{{ page.article_description }}">
+        <meta property="og:type" content="article"/>
+        <meta property="og:url" content="{{ page.url }}"/>
+        {% else %}
+        <meta name="description" content="{{ site.description }}">
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="{{ site.url }}"/>
+        {% endif %}
+        <link rel="icon" href="/favicon.png">
+        <title>Christoph Rumpel</title>
+        <!--[if lt IE 9]>
+              <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700,500italic' rel='stylesheet'
+              type='text/css'>
+        <link rel="stylesheet" type="text/css" href="/assets/css/style.min.css">
+
+    <body>
