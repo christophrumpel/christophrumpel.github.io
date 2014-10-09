@@ -1,5 +1,5 @@
 name: "christoph-rumpel.com"
-description: "Passionate web-developer and Larave artisan from Vienna"
+description: "Passionate web-developer and Laravel artisan from Vienna"
 url: "http://christoph-rumpel.com"
 exclude: ['README.md', 'sass/']
 paginate: 8
