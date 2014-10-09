@@ -10,7 +10,7 @@
         <meta name="description" content="{{ page.article_description }}">
         <meta name="og:description" content="{{ page.article_description }}">
         <meta property="og:type" content="article"/>
-        <meta property="og:url" content="{{ page.url }}"/>
+        <meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
         <meta property="og:title" content="{{ page.title }}"/>
         {% else %}
         <meta name="description" content="{{ site.description }}">
