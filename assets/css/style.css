@@ -2076,6 +2076,8 @@ pre {
   .blog-article.blog-article--full h2 {
     margin: 40px 0 20px;
     margin: 2rem 0 1rem; }
+    .blog-article.blog-article--full h2 a {
+      text-decoration: underline; }
   .blog-article.blog-article--full h3 {
     font-size: 24px;
     font-size: 1.2rem;
