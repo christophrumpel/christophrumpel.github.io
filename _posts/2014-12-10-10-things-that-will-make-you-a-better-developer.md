@@ -5,7 +5,7 @@ article_description: "I asked great developer from around the world what they th
 draft: true
 ---
 
-<header>It is easy to become a web developer these days. The only things you need is a computer and Internet. But I believe there is big difference between a developer and a good one. Good developers are like little heroes. They are awesome in what they do and are there when you need them. A rely benefit to the our world and definetely someone you can look up to! I believe everyone can make this step and start being a better developer today. This is why I asked great developers from all around the world what they think makes someone a really good developer.</header>
+<header>It is easy to become a web developer these days. The only things you need is a computer and Internet. But I believe there is big difference between a developer and a good one. Good developers are like little heroes. They are awesome in what they do and are there when you need them. A real benefit to the our world and definetely someone you can look up to! I believe everyone can make this step and start being a better developer today. This is why I asked great developers from all around the world what they think makes someone a really good developer.</header>
 
 ##1. Experiment 
 
@@ -53,4 +53,4 @@ The tenth tip is one from me: Never give up!
 
 I admit it is sometimes hard out there to be a developer these days. It's not like we just have to learn one language. We have to know about several ones as well as about dozens of tools like preprocessrors, versioning, deployment, architectures, frameworks, pattern and and and. Don't get me wrong. These stuff is great but you often get overwhelmed by all of this. Especially because the tools are changing every day.
 
-So please don't give up. Reaching for the stars is good, but help yourself and make this journey a comfortable one. Go step by step and appreciate the small things you can learn with evey project.
+So please don't give up. Reaching for the stars is good, but help yourself and make this journey a comfortable one. Go step by step and appreciate the small things you can learn with every project.
