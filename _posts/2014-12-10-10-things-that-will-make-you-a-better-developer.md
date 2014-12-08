@@ -47,7 +47,23 @@ pretend that we're trying to find the right solution if we don't do
 research. Don't just implement something from your own mind, learn
 what else is out there and then choose what's right for you. (by [Shawn McCool](http://shawnmc.cool/))
 
-##9. Never give up
+##9. Watch out for the Hypetrain
+
+The Webtechnology scene flourishes and new great projects, languages and frameworks come out every day. 
+Some projects are able to generate more buzz than others and many people will tell you
+this is the one solution to rule them all.
+
+My tip, don't jump blindly on those Hypetrains and throw everything overboard.
+Try to evaluate new things first. Going into a project blindly with something you don't know very good can
+be very challenging and may force you into directions you primarily wanted to avoid. 
+Try to find challenging Scenarios for a new technology and check how easy the solution is, or how close it comes to what you want to reach.
+Sometimes the more unpopular solution can fit your project much better or alignes 
+perfectly with your personal coding style.
+
+This said, still keep an eye on popular projects as they can turn out to be very valuable at a later point or they 
+really turn out to be the next big thing straight from the start. (by [Roman Kuba](http://codebryo.com/))
+
+##10. Never give up
 
 The tenth tip is one from me: Never give up!
 
