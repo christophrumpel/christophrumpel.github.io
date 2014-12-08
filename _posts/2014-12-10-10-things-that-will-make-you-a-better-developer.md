@@ -29,10 +29,10 @@ Read a lot of other people's code. Even if you think they're less experienced th
 This is a short, easy but effective advice from Chris Coyer. Just go out and build something. Theory is important and good but nothing will help you to grow as a developer as getting stuff done. (by [Chris Coyer](http://css-tricks.com/))
 
 ##6. Exchange knowledge
-Stop only consuming knowledge and start actively exchanging knowledge with others. How? By registering on Twitter an getting into direct contact with all those other great developers out there. (by [Christian Schäfer](https://twitter.com/derSchepp))
+Stop only consuming knowledge and start actively exchanging knowledge with others. How? By registering on Twitter an getting into direct contact with all those other great developers out there. (by [Christian Schaefer](https://twitter.com/derSchepp))
 
 ##7. Contribute to projects 
-Start contributing to open source projects. Of course this means to register for Github, where you can start small by helping out on someone else's project. After a while you will be able to begin creating your own projects. (by [Christian Schäfer](https://twitter.com/derSchepp))
+Start contributing to open source projects. Of course this means to register for Github, where you can start small by helping out on someone else's project. After a while you will be able to begin creating your own projects. (by [Christian Schaefer](https://twitter.com/derSchepp))
 
 
 ##8. Don't just implement something from your own mind
