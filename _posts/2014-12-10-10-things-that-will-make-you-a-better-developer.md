@@ -67,6 +67,6 @@ really turn out to be the next big thing straight from the start. (by [Roman Kub
 
 The tenth tip is one from me: Never give up!
 
-I admit it is sometimes hard out there to be a developer these days. It's not like we just have to learn one language. We have to know about several ones as well as about dozens of tools like preprocessrors, versioning, deployment, architectures, frameworks, pattern and and and. Don't get me wrong. These stuff is great but you often get overwhelmed by all of this. Especially because the tools are changing every day.
+I admit it is sometimes hard out there to be a developer these days. It's not like we just have to learn one language. We have to know about several ones as well as about dozens of tools like preprocessors, versioning, deployment, architectures, frameworks, pattern and and and. Don't get me wrong. These stuff is great but you often get overwhelmed by all of this. Especially because the tools are changing every day.
 
 So please don't give up. Reaching for the stars is good, but help yourself and make this journey a comfortable one. Go step by step and appreciate the small things you can learn with every project.
