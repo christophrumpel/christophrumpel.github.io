@@ -15,7 +15,7 @@ it over at Codepen. Experimenting, sharing experiments, learning from others and
 
 ##2. Appreciate the "good" in all areas of art
 
-Appreciate the “good" in all areas of art including music, architecture, literature, etc. All of these things can be very inspirational to your coding. (by [Taylor Ottwell](http://taylorotwell.com/))
+Appreciate the “good" in all areas of art including music, architecture, literature, etc. All of these things can be very inspirational to your coding. (by [Taylor Otwell](http://taylorotwell.com/))
 
 ##3. Passion 
 
