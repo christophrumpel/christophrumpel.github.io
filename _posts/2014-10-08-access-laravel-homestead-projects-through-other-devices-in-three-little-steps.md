@@ -64,11 +64,11 @@ sites:
       to: /home/vagrant/websites/tests/laravel5_tests/public
 {% endhighlight startinline %}
       
-Above we have the standard mapping for a project and an additional mapping for the new `local URL` which will be available in your whole network. Let's reload our vagrant machine and see if it worked. With Homestead I needed to reload Vagrant with the provison flag in order to make changes in the configuration file work.
+Above we have the standard mapping for a project and an additional mapping for the new `local URL` which will be available in your whole network. Let's reload our vagrant machine and see if it worked. With Homestead I needed to reload Vagrant with the provision flag in order to make changes in the configuration file work.
 If the normal reload doesn't work for you too, try that one.
 
 {% highlight PowerShell startinline %}
-vagrant reload --provison
+vagrant reload --provision
 {% endhighlight startinline %}
 
 ###Conclusion
