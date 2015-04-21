@@ -1,164 +1,180 @@
 .blog-article-container {
-  margin: auto;
-  float: none;
+    margin: auto;
+    float: none;
 }
 
 .blog-article {
-  position: relative;
-  a, a h1, a span {
-    @extend .animate;
-    color: $brand-color;
-    text-decoration: none;
-    &:hover {
-      color: $brand-color-darken;
-    }
-  }
-
-  .blog-article__title {
-    @include x-rem(font-size, 24px);
-    color: $brand-color;
-    margin: 0;
-
-    @include respond-to(600) {
-      @include x-rem(font-size, 32px);
-    }
-  }
-  .blog-article__date {
-    @include x-rem(font-size, 14px);
-    color: $brand-color;
-    margin-bottom: 5px;
-
-    &.blog-article__date--fixed {
-      position: absolute;
-      top: 0;
-      left: 0;
-      background: $brand-color;
-      color: #fff;
-      padding: 5px;
-    }
-  }
-
-  &.blog-article--preview {
-    padding: 1.5rem 0;
-    text-align: center;
-    border-top: 1px solid $brand-color;
-    &:first-child {
-      padding-top: 0;
-      border: none;
-    }
-  }
-
-  &.blog-article--external-preview {
-    @include x-rem(padding-right, 60px);
-    @include x-rem(padding-left, 60px);
-    .external-preview__sign-wrapper {
-      position: absolute;
-      top: 0;
-      right: 0;
-      height: 100%;
-      @include x-rem(width, 40px);
-      background: $brand-color;
-
-      span {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-top: -30px;
-        margin-left: -10px;
-        @include x-rem(font-size, 40px);
-        color: #fff;
-      }
+    position: relative;
+    a, a h1, a span {
+        @extend .animate;
+        color: $brand-color;
+        text-decoration: none;
+        &:hover {
+            color: $brand-color-darken;
+        }
     }
 
-    .external-preview__arrow {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 1rem;
-      height: auto;
-      margin-left: -0.5rem;
-      margin-top: -50%;
-    }
-  }
+    .blog-article__title {
+        @include x-rem(font-size, 24px);
+        color: $brand-color;
+        margin: 0;
 
-  &.blog-article--full {
-    header {
-      font-weight: 400;
-      @include x-rem(margin-bottom, 20px);
+        @include respond-to(600) {
+            @include x-rem(font-size, 32px);
+        }
     }
-    time {
-      @include x-rem(margin-bottom, 10px);
-      @include x-rem(font-size, 16px);
-      text-align: center;
-      display: block;
-    }
-    h1 {
-      @include x-rem(margin, 0 0 40px 0);
-      border-bottom: 2px solid $brand-color;
-      @include x-rem(padding-bottom, 10px);
-      text-align: center;
+    .blog-article__date {
+        @include x-rem(font-size, 14px);
+        color: $brand-color;
+        margin-bottom: 5px;
+
+        &.blog-article__date--fixed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: $brand-color;
+            color: #fff;
+            padding: 5px;
+        }
     }
 
-    h2 {
-      @include x-rem(margin, 40px 0 20px);
-      a {
-        text-decoration: underline;
-      }
-
+    &.blog-article--preview {
+        padding: 1.5rem 0;
+        text-align: center;
+        border-top: 1px solid $brand-color;
+        &:first-child {
+            padding-top: 0;
+            border: none;
+        }
     }
 
-    h3 {
-      @include x-rem(font-size, 24px);
-      @include x-rem(margin-top, 30px);
+    &.blog-article--external-preview {
+        @include x-rem(padding-right, 60px);
+        @include x-rem(padding-left, 60px);
+        .external-preview__sign-wrapper {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            @include x-rem(width, 40px);
+            background: $brand-color;
 
+            span {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-top: -30px;
+                margin-left: -10px;
+                @include x-rem(font-size, 40px);
+                color: #fff;
+            }
+        }
+
+        .external-preview__arrow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 1rem;
+            height: auto;
+            margin-left: -0.5rem;
+            margin-top: -50%;
+        }
     }
 
-    ul {
-      @include x-rem(padding, 0 20px);
-      @include x-rem(margin-bottom, 30px);
-    }
+    &.blog-article--full {
+        header {
+            font-weight: 400;
+            @include x-rem(margin-bottom, 20px);
+        }
+        time {
+            @include x-rem(margin-bottom, 10px);
+            @include x-rem(font-size, 16px);
+            text-align: center;
+            display: block;
+        }
+        h1 {
+            @include x-rem(margin, 0 0 40px 0);
+            border-bottom: 2px solid $brand-color;
+            @include x-rem(padding-bottom, 10px);
+            text-align: center;
+        }
 
-    a {
-      text-decoration: none;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
+        h2 {
+            @include x-rem(margin, 40px 0 20px);
+            a {
+                text-decoration: underline;
+            }
 
-    small {
-      @include x-rem(font-size, 16px);
-    }
+        }
 
-    figure {
-      @include x-rem(margin-bottom, 20px);
-    }
+        h3 {
+            @include x-rem(font-size, 24px);
+            @include x-rem(margin-top, 30px);
 
-    figcaption {
-      @include x-rem(font-size, 16px);
-    }
+        }
 
-    blockquote {
-      font-weight: 400;
-      font-style: italic;
-      text-align: center;
-      background: #eee;
-      @include x-rem(margin-bottom, 30px);
-      @include x-rem(padding, 40px);
-      &::after {
-        content: '"';
-      }
-      &::before {
-        content: '"';
-      }
-    }
+        ul {
+            @include x-rem(padding, 0 20px);
+            @include x-rem(margin-bottom, 30px);
+        }
 
-    pre {
-      @include x-rem(padding, 20px 40px);
-    }
+        a {
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
 
-    img {
-      width: 100%;
-      height: auto;
+        small {
+            @include x-rem(font-size, 16px);
+        }
+
+        figure {
+            @include x-rem(margin-bottom, 20px);
+        }
+
+        figcaption {
+            @include x-rem(font-size, 16px);
+        }
+
+        blockquote {
+            font-weight: 400;
+            font-style: italic;
+            text-align: center;
+            background: #eee;
+            @include x-rem(margin-bottom, 30px);
+            @include x-rem(padding, 40px);
+            &::after {
+                content: '"';
+            }
+            &::before {
+                content: '"';
+            }
+        }
+
+        pre {
+            @include x-rem(padding, 20px 40px);
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        table {
+
+            @include x-rem(font-size, 18px);
+            td, th {
+                padding-right: 15px;
+            }
+        }
+
+        .note {
+            background: #f9f2f4;
+            padding: 10px 15px;
+            border-radius: 5px;
+            color: #c7254e;
+            font-size: 15px;
+        }
     }
-  }
 }

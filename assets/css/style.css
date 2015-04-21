@@ -2120,6 +2120,17 @@ pre {
   .blog-article.blog-article--full img {
     width: 100%;
     height: auto; }
+  .blog-article.blog-article--full table {
+    font-size: 18px;
+    font-size: 0.9rem; }
+    .blog-article.blog-article--full table td, .blog-article.blog-article--full table th {
+      padding-right: 15px; }
+  .blog-article.blog-article--full .note {
+    background: #f9f2f4;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: #c7254e;
+    font-size: 15px; }
 
 /* Solarized Dark 
 
