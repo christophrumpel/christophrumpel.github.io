@@ -140,6 +140,28 @@ if (Auth::check())
 You can also define Facades yourself. A lot of Laravel packages are using 
 them too. So remember, Facades are little helpers for calling Laravel classes.
 
+##Artisan
+
+Every good framework has a command-line interface(CLI). Laravel's is called 
+    Artisan and is build on the Symfony console. Artisan provides helpful 
+    commands for your developing process. There is a lot it can do for you 
+    and here are some examples.
+    
+{% highlight PowerShell startinline %}
+// List all Artisan command
+php artisan list
+
+// Cache your routes
+php artisan route:cache
+
+// Or create a migration (there is a sperate section about migrations)
+php artisan migrate:make create_users_table
+    
+{% endhighlight startinline %}
+    
+Make sure to checkout all the other Artisan commands too. They will help you 
+develop faster and you do have to take care of the boring stuff.
+
 ##Controller
 
 As we have already seen it is possible to respond to routes directly in our 
@@ -171,7 +193,6 @@ class UserController extends Controller {
 
 }
 {% endhighlight startinline %}
-
 
 ###Resource Controller
 
@@ -212,7 +233,8 @@ Route::delete(‘/post/{id}, PostController@destroy);
 I think you got it. It's a lot to write and to repeat. Now think about the 
 controller and its methods you would have to write.
 
-This is where Laravel's `RESTful resource controller` comes handy. Again an artisan command will trigger the magic.
+This is where Laravel's `RESTful resource controller` comes handy. Artisan 
+command will trigger the magic.
 
 {% highlight Powershell startinline %}
     php artisan make:controller PhotoController
