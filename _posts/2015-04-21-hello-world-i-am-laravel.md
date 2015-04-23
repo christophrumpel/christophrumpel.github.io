@@ -63,7 +63,7 @@ Now that we know about the roads we can go, let's grab some data on the way.
 
 Eloquent is the Object Relational Mapper of Laravel(ORM). ORMs allow us to 
 map our application objects to database tables. For example if we are 
-building a blog, then posts, pages or comments would be such objects. The ORM
+building a blog, then posts, photos pages or comments would be such objects. The ORM
  will take care of handling these objects so we do not have to write any line of SQL.(unless we want to)
 
 The only thing we need for working with Eloquent is a model per database table 
@@ -197,33 +197,33 @@ class UserController extends Controller {
 
 There is a good chance that when we are working with our database objects
 (resources in this case), that we want to perform almost the same actions 
-again and again. Let's assume we have posts in our app. Think about what you 
+again and again. Let's assume we have p in our app. Think about what you 
 want to do with them:
 
-* show all posts
-* show a form to create a post
-* store a post
-* show a specific post
-* show a form to edit a specific post
-* update a specific post
-* delete a specific post
+* show all photos
+* show a form to create a photo
+* store a photo
+* show a specific photo
+* show a form to edit a specific photo
+* update a specific photo
+* delete a specific photo
 * ...
 
-This is true for posts, comments, photos and other typical resources. In a 
+This is true for photos, posts, comments and other typical resources. In a 
 lame world we would have to write routes for all theses actions that are 
 linked to controller methods. This would look something like that.
 {% highlight PHP startinline %}
-Route::get('/post', 'PostController@index');
+Route::get('/photo', 'PhotoController@index');
 
-Route::get('/post/create', 'PostController@create');
+Route::get('/photo/create', 'PhotoController@create');
 
-Route::post('/post', 'PostController@store');
+Route::post('/photo', 'PhotoController@store');
 
-Route::get('/post/{id}', 'PostController@show');
+Route::get('/photo/{id}', 'PhotoController@show');
 
-Route::get('/post/update/{id}', 'PostController@edit');
+Route::get('/photo/update/{id}', 'PhotoController@edit');
 
-Route::delete('/post/{id}', 'PostController@destroy');
+Route::delete('/photo/{id}', 'PhotoController@destroy');
 
 ...
 
@@ -235,14 +235,14 @@ controller and its methods you would have to write too.
 This is where Laravel's `RESTful resource controller` comes handy. An Artisan command will trigger the magic.
 
 {% highlight Powershell startinline %}
-    php artisan make:controller PostController
+    php artisan make:controller PhotoController
 {% endhighlight startinline %}
 
 This will do two things. First it will create a PhotoController with methods for index, create, store, show, edit, update and destroy. And secondly you can use the resource route for connecting all these methods to routes.
 
 {% highlight PHP startinline %}
 // Defining a resource route
-Route::resource('post', 'PostController');
+Route::resource('photo', 'PhotoController');
 {% endhighlight startinline %}
 
 The table below shows the created routes and the connected controller methods
@@ -320,8 +320,8 @@ This is my favorite Laravel 5 feature and yeah, it has something to do
 with forms. It's a clean way to validate your forms through custom classes.
 
 To create a new form request use the artisan command `php artisan 
-make:request StorePostRequest`. The name implies that we are using this 
-request to validate a new post's data. Let's take a look at the two important
+make:request StorePhotoRequest`. The name implies that we are using this 
+request to validate a new photo's data. Let's take a look at the two important
  methods of the created class.
  
 {% highlight PHP startinline %}
@@ -361,8 +361,8 @@ In the authorize method we determine if the request is authorized.(surprise!)
    how we trigger the validation.
   
   {% highlight PHP startinline %}
-  // From the PostController
-  public function store(StorePostRequest $request)
+  // From the PhotoController
+  public function store(StorePhotoRequest $request)
   {
       // The incoming request is valid...
   }
