@@ -5,7 +5,7 @@ title: "Hello world, I am Laravel (5)"
 
 <header>
 So there is this thing called Laravel. You may have heard of it already, but 
-you’re not sure what it is actually about? Or you do, but want to know more 
+you're not sure what it is actually about? Or you do, but want to know more 
 about it and its great new features in version 5? Great, this post is 
 especially for you! Laravel is at the same time one of the youngest and most 
 popular PHP frameworks out there. So how does this work together? Let us take
@@ -78,7 +78,7 @@ class User extends Model {
 {% endhighlight startinline %}
 
 If the model class is named "User", Laravel will automatically look for a 
-"users" table in the database. To overwrite this behaviour we can add $table 
+"users" table in the database. To overwrite this behavior we can add $table 
 with the name of the table.
 
 Now we are good to go for some basic Eloquent magic.
@@ -164,9 +164,8 @@ develop faster and you do have to take care of the boring stuff.
 
 ##Controller
 
-As we have already seen it is possible to respond to routes directly in our 
-`routes.php` file. This is for some cases ok, but we want a cleaner way. 
-Controllers will help us structering our applications. Our routes will 
+As we have already seen it is possible to respond to routes directly in our `routes.php` file. This is for some cases ok, but we want a cleaner way. 
+Controllers will help us structuring our applications. Our routes will 
 trigger controller methods to perform certain jobs before we return data or a whole view.
 
 The controller example receives an `$id` from our route `Route::get
@@ -305,7 +304,7 @@ class CreateUsersTable extends Migration {
 {% endhighlight startinline %}
 
 This is what a typical migration file looks like. It's a class with an up and a
- down method. In the first one we are defining the changes we woul'd like to 
+ down method. In the first one we are defining the changes we would like to 
  make to our database. (like adding, removing or changes tables or columns)
  
  In the down method we are undoing the changes from the up method. This is 
@@ -318,7 +317,7 @@ structure if needed. I wouldn't want to work without them anymore!
 
 ##Form requests
 
-This is my favourite Laravel 5 feature and yeah, it has something to do 
+This is my favorite Laravel 5 feature and yeah, it has something to do 
 with forms. It's a clean way to validate your forms through custom classes.
 
 To create a new form request use the artisan command `php artisan 
@@ -470,8 +469,7 @@ Elixir is an API for writing Gulp tasks in Laravel. Gulp is a JavaScript task
 
 ###Homestead
 
-Homestead is a ready to go vagrant box especially optimised for Laravel. 
-[Read more](http://laravel.com/docs/5.0/homestead)
+Homestead is a ready to go vagrant box especially optimized for Laravel. [Read more](http://laravel.com/docs/5.0/homestead)
 
 ###Laracasts
 
@@ -496,10 +494,9 @@ Forge. Both Forge and Envoyer are not Laravel specific. [Read more]
 
 ###Lumen
 
-Lumen is the brand new Laravel micro-framework. It is built to be extremely 
-fast and is faster than other known micro-frameworks like Slim oder Silex. 
+Lumen is the brand new Laravel micro-framework. It is built to be extremely fast and is faster than other known light frameworks like Slim oder Silex. 
 Every time you need a microservice you can use Lumen without sacrificing the 
-power of Laravel. You can still use your favourite ORM eloquent and more, but
+power of Laravel. You can still use your favorite ORM eloquent and more, but
  without the overhead of a full-framework. If you at some time need your 
  application to do more, you can easily switch Lumen out with the standard 
  Laravel. That's awesome and something great for the community. [Read more]
