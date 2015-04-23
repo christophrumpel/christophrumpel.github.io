@@ -342,7 +342,7 @@ request to validate a new photo's data. Let's take a look at the two important
  public function rules() {
      return [
          'title' => 'required|string',
-         'content' => 'required|string',
+         'description' => 'required|string',
      ];
  }
      
