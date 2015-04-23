@@ -232,8 +232,7 @@ Route::delete('/post/{id}', 'PostController@destroy');
 I think you got it. It's a lot to write and to repeat. Now think about the 
 controller and its methods you would have to write too.
 
-This is where Laravel's `RESTful resource controller` comes handy. Artisan 
-command will trigger the magic.
+This is where Laravel's `RESTful resource controller` comes handy. An Artisan command will trigger the magic.
 
 {% highlight Powershell startinline %}
     php artisan make:controller PhotoController
