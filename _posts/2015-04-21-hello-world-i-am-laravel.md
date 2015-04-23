@@ -307,7 +307,7 @@ This is what a typical migration file looks like. It's a class with an up and a
  make to our database. (like adding, removing or changes tables or columns)
  
  In the down method we are undoing the changes from the up method. This is 
- because we would like to be able roll changes back in some cases. In our 
+ because we would like to be able to roll changes back in some cases. In our 
  case deleting the new table would be the opposite of creating it.
 
 In Laravel you can run migrations with the artisan command `php artisan 
