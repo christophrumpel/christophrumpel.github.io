@@ -449,8 +449,7 @@ Laravel 5 feature</div>
 
 ##Conclusion
 
-I hope I could show how great it is working with Laravel on your applications
-. Everything is built to help you working on your projects and to make 
+I hope I could show how great it is working with Laravel on your applications. Everything is built to help you working on your projects and to make 
 working fast and fun. Of course these were just the base components you need 
 to know about as a start. It is getting even better when you find all the 
 little tricks 
