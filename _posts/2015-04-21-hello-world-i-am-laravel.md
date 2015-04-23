@@ -354,7 +354,7 @@ In the authorize method we determine if the request is authorized.(surprise!)
  
  The rules method returns an array with the typical Laravel validation rules.
   We are defining some columns and their requirements like the title is a 
-  must und needs to a string.
+  must und needs to be a string.
   
   Ok got it, but why is this so special you might think? First a separate class
    is the best way to handle these validations, but there is more. Let's see 
