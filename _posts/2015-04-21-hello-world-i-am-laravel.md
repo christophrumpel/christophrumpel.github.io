@@ -5,7 +5,7 @@ title: "Hello world, I am Laravel (5)"
 
 <header>
 So there is this thing called Laravel. You may have heard of it already, but 
-you’re not sure what it is actually about? Or you do, but want to know more 
+you're not sure what it is actually about? Or you do, but want to know more 
 about it and its great new features in version 5? Great, this post is 
 especially for you! Laravel is at the same time one of the youngest and most 
 popular PHP frameworks out there. So how does this work together? Let us take
@@ -63,7 +63,7 @@ Now that we know about the roads we can go, let's grab some data on the way.
 
 Eloquent is the Object Relational Mapper of Laravel(ORM). ORMs allow us to 
 map our application objects to database tables. For example if we are 
-building a blog, then posts, pages or comments would be such objects. The ORM
+building a blog, then posts, photos pages or comments would be such objects. The ORM
  will take care of handling these objects so we do not have to write any line of SQL.(unless we want to)
 
 The only thing we need for working with Eloquent is a model per database table 
@@ -78,7 +78,7 @@ class User extends Model {
 {% endhighlight startinline %}
 
 If the model class is named "User", Laravel will automatically look for a 
-"users" table in the database. To overwrite this behaviour we can add $table 
+"users" table in the database. To overwrite this behavior we can add $table 
 with the name of the table.
 
 Now we are good to go for some basic Eloquent magic.
@@ -164,9 +164,8 @@ develop faster and you do have to take care of the boring stuff.
 
 ##Controller
 
-As we have already seen it is possible to respond to routes directly in our 
-`routes.php` file. This is for some cases ok, but we want a cleaner way. 
-Controllers will help us structering our applications. Our routes will 
+As we have already seen it is possible to respond to routes directly in our `routes.php` file. This is for some cases ok, but we want a cleaner way. 
+Controllers will help us structuring our applications. Our routes will 
 trigger controller methods to perform certain jobs before we return data or a whole view.
 
 The controller example receives an `$id` from our route `Route::get
@@ -188,7 +187,7 @@ class UserController extends Controller {
      */
     public function showProfile($id)
     {
-        return view('user.profile', ['user' => User::findOrFail($id)]);
+        return view('profile', ['user' => User::findOrFail($id)]);
     }
 
 }
@@ -198,43 +197,42 @@ class UserController extends Controller {
 
 There is a good chance that when we are working with our database objects
 (resources in this case), that we want to perform almost the same actions 
-again and again. Let's assume we have posts in our app. Think about what you 
+again and again. Let's assume we have photos in our app. Think about what you 
 want to do with them:
 
-* show all posts
-* show a form to create a post
-* store a post
-* show a specific post
-* show a form to edit a specific post
-* update a specific post
-* delete a specific post
+* show all photos
+* show a form to create a photo
+* store a photo
+* show a specific photo
+* show a form to edit a specific photo
+* update a specific photo
+* delete a specific photo
 * ...
 
-This is true for posts, comments, photos and other typical resources. In a 
+This is true for photos, posts, comments and other typical resources. In a 
 lame world we would have to write routes for all theses actions that are 
 linked to controller methods. This would look something like that.
 {% highlight PHP startinline %}
-Route::get(‘/post, PostController@index’);
+Route::get('/photo', 'PhotoController@index');
 
-Route::get(‘/post/create, PostController@create);
+Route::get('/photo/create', 'PhotoController@create');
 
-Route::post(‘/post, PostController@store);
+Route::post('/photo', 'PhotoController@store');
 
-Route::get(‘/post/{id}, PostController@show);
+Route::get('/photo/{id}', 'PhotoController@show');
 
-Route::get(‘/post/update/{id}, PostController@edit);
+Route::get('/photo/update/{id}', 'PhotoController@edit');
 
-Route::delete(‘/post/{id}, PostController@destroy);
+Route::delete('/photo/{id}', 'PhotoController@destroy');
 
 ...
 
 {% endhighlight startinline %}
 
 I think you got it. It's a lot to write and to repeat. Now think about the 
-controller and its methods you would have to write.
+controller and its methods you would have to write too.
 
-This is where Laravel's `RESTful resource controller` comes handy. Artisan 
-command will trigger the magic.
+This is where Laravel's `RESTful resource controller` comes handy. An Artisan command will trigger the magic.
 
 {% highlight Powershell startinline %}
     php artisan make:controller PhotoController
@@ -244,7 +242,7 @@ This will do two things. First it will create a PhotoController with methods for
 
 {% highlight PHP startinline %}
 // Defining a resource route
-Route::resource('post', 'PostController');
+Route::resource('photo', 'PhotoController');
 {% endhighlight startinline %}
 
 The table below shows the created routes and the connected controller methods
@@ -305,11 +303,11 @@ class CreateUsersTable extends Migration {
 {% endhighlight startinline %}
 
 This is what a typical migration file looks like. It's a class with an up and a
- down method. In the first one we are defining the changes we woul'd like to 
+ down method. In the first one we are defining the changes we would like to 
  make to our database. (like adding, removing or changes tables or columns)
  
  In the down method we are undoing the changes from the up method. This is 
- because we would like to be able roll changes back in some cases. In our 
+ because we would like to be able to roll changes back in some cases. In our 
  case deleting the new table would be the opposite of creating it.
 
 In Laravel you can run migrations with the artisan command `php artisan 
@@ -318,12 +316,12 @@ structure if needed. I wouldn't want to work without them anymore!
 
 ##Form requests
 
-This is my favourite Laravel 5 feature and yeah, it has something to do 
+This is my favorite Laravel 5 feature and yeah, it has something to do 
 with forms. It's a clean way to validate your forms through custom classes.
 
 To create a new form request use the artisan command `php artisan 
-make:request StorePostRequest`. The name implies that we are using this 
-request to validate a new post's data. Let's take a look at the two important
+make:request StorePhotoRequest`. The name implies that we are using this 
+request to validate a new photo's data. Let's take a look at the two important
  methods of the created class.
  
 {% highlight PHP startinline %}
@@ -344,7 +342,7 @@ request to validate a new post's data. Let's take a look at the two important
  public function rules() {
      return [
          'title' => 'required|string',
-         'content' => 'required|string',
+         'description' => 'required|string',
      ];
  }
      
@@ -356,15 +354,15 @@ In the authorize method we determine if the request is authorized.(surprise!)
  
  The rules method returns an array with the typical Laravel validation rules.
   We are defining some columns and their requirements like the title is a 
-  must und needs to a string.
+  must und needs to be a string.
   
   Ok got it, but why is this so special you might think? First a separate class
    is the best way to handle these validations, but there is more. Let's see 
    how we trigger the validation.
   
   {% highlight PHP startinline %}
-  // From the PostController
-  public function store(StorePostRequest $request)
+  // From the PhotoController
+  public function store(StorePhotoRequest $request)
   {
       // The incoming request is valid...
   }
@@ -431,8 +429,7 @@ parameters to be a specific type.</div>
 ###Method injection
 
 Probably you do not need the Response class in all your UserController 
-methods. In this case method injection comes handy. We can inject the method 
-within our getIndex method arguments. Now we do not need the constructor 
+methods. In this case method injection comes handy. We can inject the class within our getIndex method arguments. Now we do not need the constructor 
 anymore and we save some lines.
 
 {% highlight PHP startinline %}
@@ -452,8 +449,7 @@ Laravel 5 feature</div>
 
 ##Conclusion
 
-I hope I could show how great it is working with Laravel on your applications
-. Everything is built to help you working on your projects and to make 
+I hope I could show how great it is working with Laravel on your applications. Everything is built to help you working on your projects and to make 
 working fast and fun. Of course these were just the base components you need 
 to know about as a start. It is getting even better when you find all the 
 little tricks 
@@ -470,8 +466,7 @@ Elixir is an API for writing Gulp tasks in Laravel. Gulp is a JavaScript task
 
 ###Homestead
 
-Homestead is a ready to go vagrant box especially optimised for Laravel. 
-[Read more](http://laravel.com/docs/5.0/homestead)
+Homestead is a ready to go vagrant box especially optimized for Laravel. [Read more](http://laravel.com/docs/5.0/homestead)
 
 ###Laracasts
 
@@ -496,10 +491,9 @@ Forge. Both Forge and Envoyer are not Laravel specific. [Read more]
 
 ###Lumen
 
-Lumen is the brand new Laravel micro-framework. It is built to be extremely 
-fast and is faster than other known micro-frameworks like Slim oder Silex. 
+Lumen is the brand new Laravel micro-framework. It is built to be extremely fast and is faster than other known light frameworks like Slim oder Silex. 
 Every time you need a microservice you can use Lumen without sacrificing the 
-power of Laravel. You can still use your favourite ORM eloquent and more, but
+power of Laravel. You can still use your favorite ORM eloquent and more, but
  without the overhead of a full-framework. If you at some time need your 
  application to do more, you can easily switch Lumen out with the standard 
  Laravel. That's awesome and something great for the community. [Read more]
