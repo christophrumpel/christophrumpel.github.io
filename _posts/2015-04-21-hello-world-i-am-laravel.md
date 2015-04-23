@@ -213,17 +213,17 @@ This is true for posts, comments, photos and other typical resources. In a
 lame world we would have to write routes for all theses actions that are 
 linked to controller methods. This would look something like that.
 {% highlight PHP startinline %}
-Route::get(‘/post, PostController@index’);
+Route::get('/post', 'PostController@index');
 
-Route::get(‘/post/create, PostController@create);
+Route::get('/post/create', 'PostController@create');
 
-Route::post(‘/post, PostController@store);
+Route::post('/post', 'PostController@store');
 
-Route::get(‘/post/{id}, PostController@show);
+Route::get('/post/{id}', 'PostController@show');
 
-Route::get(‘/post/update/{id}, PostController@edit);
+Route::get('/post/update/{id}', 'PostController@edit');
 
-Route::delete(‘/post/{id}, PostController@destroy);
+Route::delete('/post/{id}', 'PostController@destroy');
 
 ...
 
