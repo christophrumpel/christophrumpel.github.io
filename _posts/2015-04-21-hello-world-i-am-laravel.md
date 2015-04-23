@@ -197,7 +197,7 @@ class UserController extends Controller {
 
 There is a good chance that when we are working with our database objects
 (resources in this case), that we want to perform almost the same actions 
-again and again. Let's assume we have p in our app. Think about what you 
+again and again. Let's assume we have photos in our app. Think about what you 
 want to do with them:
 
 * show all photos
