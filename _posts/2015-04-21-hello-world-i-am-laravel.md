@@ -429,8 +429,7 @@ parameters to be a specific type.</div>
 ###Method injection
 
 Probably you do not need the Response class in all your UserController 
-methods. In this case method injection comes handy. We can inject the method 
-within our getIndex method arguments. Now we do not need the constructor 
+methods. In this case method injection comes handy. We can inject the class within our getIndex method arguments. Now we do not need the constructor 
 anymore and we save some lines.
 
 {% highlight PHP startinline %}
