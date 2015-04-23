@@ -235,7 +235,7 @@ controller and its methods you would have to write too.
 This is where Laravel's `RESTful resource controller` comes handy. An Artisan command will trigger the magic.
 
 {% highlight Powershell startinline %}
-    php artisan make:controller PhotoController
+    php artisan make:controller PostController
 {% endhighlight startinline %}
 
 This will do two things. First it will create a PhotoController with methods for index, create, store, show, edit, update and destroy. And secondly you can use the resource route for connecting all these methods to routes.
