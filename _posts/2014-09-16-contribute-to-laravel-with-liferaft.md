@@ -3,6 +3,9 @@ layout: post
 title: "Contribute to Laravel with Liferaft"
 ---
 
+<div class="note"><strong>Update:</strong> Since version 5 Laravel Liferaft is
+ no longer available!</div>
+
 <header>You have probably heard that Laravel has changed the way you can submit bug reports. If you haven't, take a look at its GitHub page and you won't find any `Issues` tab anymore. Read on and I will tell you what this is all about.</header>
 
 ###What it was like
