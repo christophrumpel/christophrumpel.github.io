@@ -37,6 +37,8 @@ So let's say you have made this pull request with a super amazing feature for
  rebasing is used for cleaning up your git history and this is exactly what 
  we want to do.
  
+##See interactive rebasing in production
+ 
  Finally here is some code. We checkout the branch from our pull request 
  and start the interactive rebase session with the 
  master branch as our base. This means we want to edit all the new 
@@ -77,7 +79,12 @@ squash 3fedbd5 fix typo
 {% endhighlight startinline %}
     
 After editing the file you need to save it and provide a last new commit 
-message for the merge.
+message for the merge. The last thing to do, is to push the changes.
+ 
+  <div class="note"><strong>Note:</strong> While rebasing we have to use the 
+  force flag like "git push -f" in order to perform a push!</div>
+  
+##Conclusion
 
 Voila. Now you got a clean commit history ready to get 
 merged with just one meaningful commit. Git rebase often feels like using black 
