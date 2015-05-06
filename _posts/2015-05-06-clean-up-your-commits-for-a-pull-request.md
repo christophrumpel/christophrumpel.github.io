@@ -52,7 +52,7 @@ git rebase -i master
 {% endhighlight startinline %}
 
  <div class="note"><strong>Note:</strong> It is possible to set a certain 
- commit as base too instead of the master branch!</div>
+ commit as base too, instead of the master branch!</div>
 
 This will open an editor with an overview of the commits (hash and commit 
 message) and some instructions on what you can edit.
