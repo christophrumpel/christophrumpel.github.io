@@ -64,12 +64,19 @@ pick dae2691 add amazing feature
 pick 3491879 add test
 pick 3fedbd5 fix typo
 
-# instructions left out here
+# Commands:
+# p, pick = use commit
+# r, reword = use commit, but edit the commit message
+# e, edit = use commit, but stop for amending
+# s, squash = use commit, but meld into previous commit
+# f, fixup = like "squash", but discard this commit's log message
+# x, exec = run command (the rest of the line) using shell
 {% endhighlight startinline %}
 
 We are interested in the `squash` command wich will "..use commit, but 
 meld into previous commit..". Let's switch it with the `pick` command for
- our last two commits. This means we'd like to keep all the changes, but meld
+ our last two commits. (You can just write "s" instead of squash too)
+ This means we'd like to keep all the changes, but meld
   them together under the first commit message.
  
 {% highlight PowerShell startinline %}
