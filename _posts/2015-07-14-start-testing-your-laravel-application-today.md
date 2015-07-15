@@ -77,8 +77,8 @@ This way we will always know the status of our home site. If you made a mistake 
 our test will let us know.
 
 Of course this is just the tip of the testing iceberg. This little test doesn't mean that your whole application is 
-working, but it is a start. In my next article I will show you some more great features like testing saving data to a 
-database or checking an API response.
+working, but it is a start. In my next article I will show you some more great features like how to test what you're 
+saving to a database or how to check an API response.
 
 
 
