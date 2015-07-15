@@ -14,7 +14,7 @@ Where do you start and the biggest question: What is testable? We don't care abo
 
 This is why this little tutorial is perfect for you. You don't have to be aware of all the things flying around in the 
 testing's sphere. Knowing that automatic testing is important is enough for now.
-This tutorial is just concentrating on the biggest step: getting you to start.
+This tutorial is just concentrating on the biggest step: `getting you to start`
 
 ##Write your first test
 Today is the perfect time to start testing your application.
