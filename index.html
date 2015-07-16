@@ -8,21 +8,23 @@ page-class: page--home
     <div class="row">
         <div class="col-xs-12 col-md-12">
             {% for post in paginator.posts %}
-                <article class="blog-article blog-article--preview{% if post.external_url %} blog-article--external-preview{% endif %}">
-                    <header class="blog-article__date">{{ post.date | date: "%B %d, %Y" }}</header>
-                    {% if post.external_url %}
+                {% unless post.draft %}
+                    <article class="blog-article blog-article--preview{% if post.external_url %} blog-article--external-preview{% endif %}">
+                        <header class="blog-article__date">{{ post.date | date: "%B %d, %Y" }}</header>
+                        {% if post.external_url %}
                         <a href="{{ post.external_url }}">
                             <div class="external-preview__sign-wrapper">
                                 <img class="external-preview__arrow" src="/assets/images/arrow.png" alt="Extern Link Arrow" />
                             </div>
-                    {% else %}
-                        <a href="{{ post.url }}">
-                    {% endif %}
-                        <h1 class="blog-article__title">
-                            {{ post.title }}
-                        </h1>
-                    </a>
-                </article>
+                            {% else %}
+                            <a href="{{ post.url }}">
+                                {% endif %}
+                                <h1 class="blog-article__title">
+                                    {{ post.title }}
+                                </h1>
+                            </a>
+                    </article>
+                {% endunless %}
             {% endfor %}
         </div>
     </div>
