@@ -27,7 +27,7 @@ In bigger project I am using a a [feature branch workflow](https://de.atlassian
 ##Checkout to rescue
 
 So what can we do about it? First we need to get the hash / id from our last commit of the deleted branch. Every commit 
-gets a 40 digit hash code which represents the whole commit. Additionally there is a seven digit short one. We can use 
+gets a 40 digit hash code which represents the whole commit. Additionally there is a short one. We can use 
 both of them.
 
 If you just deleted the branch, the commit's id is right in front of you. (`e2d052`)

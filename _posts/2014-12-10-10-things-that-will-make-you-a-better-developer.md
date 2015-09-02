@@ -2,7 +2,6 @@
 layout: post
 title: "10 things that will make you a better developer"
 article_description: "I asked great developer from around the world what they think will make someone a better developer."
-draft: true
 ---
 
 <header>It is easy to become a web developer these days. The only things you need is a computer and Internet. But I believe there is big difference between a developer and a good one. Good developers are like little heroes. They are awesome in what they do and are there when you need them. A real benefit to the our world and definetely someone you can look up to! I believe everyone can make this step and start being a better developer today. This is why I asked great developers from all around the world what they think makes someone a really good developer.</header>
