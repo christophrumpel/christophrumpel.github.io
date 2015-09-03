@@ -26,7 +26,7 @@ git config --global rerere.enabled true
 {% endhighlight startinline %}
 
 That's it. From now on Git will remember how you resolve conflicts. You can see that it works when you take a closer 
-look at the Git ouput after a conflict has been resolved.
+look at the Git output after a conflict has been resolved.
 
 {% highlight PowerShell startinline %}
 ...
