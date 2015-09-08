@@ -103,6 +103,20 @@ $gate->before(function ($user, $ability) {
 });
 {% endhighlight startinline %}
 
+##Use it in Blade
+Still not enough? Great, because here is more. You can make use of this features in Blade too. This comes handy when we 
+want display something depending on the user's permissions. In our case we want to show an edit link for comments which 
+belong to me. Here we go!
+
+{% highlight PHP startinline %}
+// Inside a blade template file
+// ...
+
+@can('update-comment', $comment)
+    {% raw %}<a href="/comment/{{ $comment->id }}/edit">Edit Comment</a>{% endraw %} 
+@endcan
+{% endhighlight startinline %}
+
 ##Conclusion
 Laravel 5.1.11 was a small release, but it is still providing some great new ACL features to the framework. Read more 
 about it [here](http://laravel.com/docs/5.1/authorization) and start toying around.
