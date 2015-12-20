@@ -1,126 +1,27 @@
 ---
 layout: post
-title: "New ACL features in Laravel 5.1.11"
+title: "Stop reading blog articles like you do"
 ---
 
 
 <header>
-Since the Laravel 5.1.11 release it is providing some great new authorization features. Let's dive right in.
+Everybody tells you to read blog articles to keep yourself up to date and to become a better developer. I want to share with you my thoughts about this topic and what they don’t tell you about it.
 </header>
 
-So we all already know about the Authentication features in Laravel. They are nice, but in many applications just a start
- in handling your users. We always need some kind of permissions too. Who is allowed to update this comment? Or
-   are there some users who should be allowed to do all kind of actions? These are the questions we are going to answer 
-   here.
+Do you know this feeling? The feeling after reading a good blog article? It is like “OMG he is absolutely right!” or maybe more like “Why am I not working like this? It is so obvious now”. It doesn't matter if the article is about CSS, PHP, SCRUM or you name it. `Just because of one article, we start questioning everything we do!` An article from a normal person just like you or me. Someone who doesn't know your work or you. Someone who doesn't know your team or your clients. So someone who really doesn’t know anything about you. But still we immediately feel that the author is right and we are doing something wrong.
 
-## Setting abilities
-So there is this new Laravel class `Illuminate\Auth\Access\Gate` handling setting and checking, so called, abilities.
-The Laravel `AuthServiceProvider` is the recommended place to define such an ability. In our case we would like to 
-protect our comments.
+##Simon says
+I have had this feeling so many times. BEM is the only way to write good CSS. Don’t store date from within a controller, use the repository pattern. Use an interface too so you can switch out your ORM when you need to. You need to test to be good programmer, use PHPUnit, aehm Codeception, no Behat, I meant phpspec. But it all is careless if you do not follow the SOLID principles and do TDD, BDD und DDD of course. And by the way Mysql is old, PHP is slow and there are so many programmers out there that are half your age and double you skills, so it is better for you to stop programming!
 
-{% highlight PHP startinline %}
-// Inside AuthServiceProvider
-// ...
+<blockquote>
+We are all figuring this stuff out. Everybody! (Jeffrey Way)
+</blockquote>
 
-public function boot(GateContract $gate)
-{
-    parent::registerPolicies($gate);
+I guess I have made my point. This is all because our industry can be so overwhelming. We all think that we are not good enough and that we need to learn more and more and more. Of course it is hard to stay up to date these days, but we are all figuring this stuff out. Everybody has been there and even people who have been working for more than ten years often feel that way. We need to start believing in our strengths and in our decisions. Don’t let others tell you what you should do.
 
-    $gate->define('update-comment', function ($user, $comment) {
-        return $user->id === $comment->user_id;
-    });
-}
-{% endhighlight startinline %}
-
-Inside the boot method we are defining the `update-comment` ability. We only want users to update a 
-comment if it belongs to them. This is what we are checking here.
-
-<div class="note"><strong>Note:</strong> It is also possible to set a class and method like 'Class@method' as the second
- parameter instead of
- the closure.</div>
- 
-## Checking abilities through the Gate facade
- 
-Now that we set our permission, we'd like to check it before updating a comment.
- 
-{% highlight PHP startinline %}
-// inside the CommentController
-// ...
-
-public function update($id)
-{
-    $comment = comment::findOrFail($id);
-    
-    if (Gate::denies('update-comment', $comment)) {
-        abort(403);
-    }
-
-    // Update Comment...
-}
-{% endhighlight startinline %}
-
-<div class="note"><strong>Note:</strong> We do not need to pass the user object to the denies method. The Gate facade 
-will take the current authenticated user automatically.</div>
-
-It is possible to use the opposite Gate method `allows` too.
-
-{% highlight PHP startinline %}
- 
-if (Gate::allows('update-comment', $comment)) {
-    // Update Comment...
-}
-
-{% endhighlight startinline %}
-
-## Checking abilities through the model instance
-And of course there is another way to check our udpate-comment permission. This time we are using the user instance 
-and the new `can` or `cannot` methods.
-
-{% highlight PHP startinline %}
-// Inside the CommentController
-// ...
-
-if ($request->user()->cannot('update-comment', $comment)) {
-    abort(403);
-}
-
-{% endhighlight startinline %}
-
-Both accomplish the same task, so it is up to you to decide which way you prefer.
-
-## There is always a super admin
-
-I guess in every application there is a super admin with super powers. Of course he or she shouldn't be hindered by our 
-Gate. For this case Laravel provides an additional `before` method. Just place it inside the AuthServiceProvider again. 
-Now we just need to provide the information if this user should have all rights. In this case it is a method, but it 
-also could be a database field or something else. This is totally up to you.
-
-{% highlight PHP startinline %}
-$gate->before(function ($user, $ability) {
-    if ($user->isSuperAdmin()) {
-        return true;
-    }
-});
-{% endhighlight startinline %}
-
-##Use it in Blade
-Still not enough? Great, because here is more. You can make use of this features in Blade too. This comes handy when we 
-want display something depending on the user's permissions. In our case we want to show an edit link for comments which 
-belong to me. Here we go!
-
-{% highlight PHP startinline %}
-// Inside a blade template file
-// ...
-
-@can('update-comment', $comment)
-    {% raw %}<a href="/comment/{{ $comment->id }}/edit">Edit Comment</a>{% endraw %} 
-@endcan
-{% endhighlight startinline %}
+##You are not like Kent Beck
+`Everything is about scope!` Next time you read an article keep that in mind. I am not saying that you cannot learn form other people’s experiences. You just need to stop reading like you did before. The author is always talking about his or her point of view. It may be similar to your’s but most of the times it is not. Even if you are reading an post from Robert C. Martin or Kent Beck. Of course these guys really know what they are talking about but again scope! I guess you are not working for Facebook? How many of us have similar jobs to them? Maybe 5% or less? I don’t need to think about all the SOLID principles when I am building a simple CRUD app. Even worse, they could make my code unnecessary complex. My app could suffer from such wrong decisions too. We need to learn to figure out what is best for our projects.
 
 ##Conclusion
-Laravel 5.1.11 was a small release, but it is still providing some great new ACL features to the framework. Read more 
-about it [here](http://laravel.com/docs/5.1/authorization) and start toying around.
-
-
-
-    
+A little recap. Think about scope whenever you read blog articles and before you start questions your work or yourself. In many times you know your work, your team and clients better than everyone else out there. Of course let other people help you and inspire you. But don’t do everything they recommend. Believe in yourself and your decisions. You are a professional too!
+   
