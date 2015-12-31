@@ -66,3 +66,9 @@ I guess this is one of my biggest accomplishments this year. Jeffrey Way has thi
 
 We don't need to immediately question our work and ourselves every time we read a smart article or see a great talk. It is great that we are all sharing so much stuff but we need to stop following recommendations blindly. We are all smart people and we 
 need to believe more in our strengths. 
+
+## Happy new year
+
+I am grateful for an exciting 2015 year. I learned so many new things and I am still figuring stuff out. That's great, 
+because that means I am still here fighting and building my place in our web. I am looking forward to the next year and 
+wish you all the best. Let's make the web a better place in 2016 too.
