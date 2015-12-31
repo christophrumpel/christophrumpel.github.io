@@ -71,4 +71,4 @@ need to believe more in our strengths.
 
 I am grateful for an exciting 2015 year. I learned so many new things and I am still figuring stuff out. That's great, 
 because that means I am still here fighting and building my place in our web. I am looking forward to the next year and 
-wish you all the best. Let's make the web a better place in 2016 too.
+I wish you all the best. Let's make the web a better place in 2016 too.
