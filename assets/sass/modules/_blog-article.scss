@@ -5,11 +5,11 @@
 
 .blog-article {
     position: relative;
-    a, a h1, a span {
+    a {
         @extend .animate;
         color: $brand-color;
         text-decoration: none;
-        &:hover {
+        &:hover, &:focus {
             color: $brand-color-darken;
         }
     }

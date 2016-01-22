@@ -1862,7 +1862,7 @@ pre {
 .font-italic {
   font-style: italic; }
 
-.animate, a, .blog-article a, .blog-article a h1, .blog-article a span {
+.animate, a, .blog-article a {
   -webkit-transition: 0.7s ease-out all;
   transition: 0.7s ease-out all; }
 
@@ -1943,6 +1943,12 @@ pre {
   position: relative;
   margin: auto;
   width: 60px; }
+  .cr-logo a {
+    display: block; }
+    .cr-logo a:hover .cr-logo__image, .cr-logo a:focus .cr-logo__image {
+      left: -50%; }
+    .cr-logo a:hover .cr-logo__me, .cr-logo a:focus .cr-logo__me {
+      left: 50%; }
   .cr-logo .cr-logo__circle {
     -webkit-transition: background 0.5s;
     transition: background 0.5s;
@@ -1964,10 +1970,6 @@ pre {
       left: 150%;
       margin-top: -30px;
       margin-left: -30px; }
-    .cr-logo .cr-logo__circle:hover .cr-logo__image {
-      left: -50%; }
-    .cr-logo .cr-logo__circle:hover .cr-logo__me {
-      left: 50%; }
 
 .main-header {
   background-color: #323232; }
@@ -1992,10 +1994,10 @@ pre {
 
 .blog-article {
   position: relative; }
-  .blog-article a, .blog-article a h1, .blog-article a span {
+  .blog-article a {
     color: #65aa9c;
     text-decoration: none; }
-    .blog-article a:hover, .blog-article a h1:hover, .blog-article a span:hover {
+    .blog-article a:hover, .blog-article a:focus {
       color: #457d71; }
   .blog-article .blog-article__title {
     font-size: 24px;

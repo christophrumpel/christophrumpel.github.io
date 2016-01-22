@@ -8,23 +8,23 @@ page-class: page--home
     <div class="row">
         <div class="col-xs-12 col-md-12">
             {% for post in paginator.posts %}
-                {% unless post.draft %}
-                    <article class="blog-article blog-article--preview{% if post.external_url %} blog-article--external-preview{% endif %}">
-                        <header class="blog-article__date">{{ post.date | date: "%B %d, %Y" }}</header>
-                        {% if post.external_url %}
-                        <a href="{{ post.external_url }}">
-                            <div class="external-preview__sign-wrapper">
-                                <img class="external-preview__arrow" src="/assets/images/arrow.png" alt="Extern Link Arrow" />
-                            </div>
-                            {% else %}
-                            <a href="{{ post.url }}">
-                                {% endif %}
-                                <h1 class="blog-article__title">
-                                    {{ post.title }}
-                                </h1>
-                            </a>
-                    </article>
-                {% endunless %}
+            {% unless post.draft %}
+            <article class="blog-article blog-article--preview{% if post.external_url %} blog-article--external-preview{% endif %}" role="article">
+                <header class="blog-article__date">{{ post.date | date: "%B %d, %Y" }}</header>
+                {% if post.external_url %}
+                <a href="{{ post.external_url }}">
+                    <div class="external-preview__sign-wrapper">
+                        <img class="external-preview__arrow" src="/assets/images/arrow.png" alt="Extern Link Arrow"/>
+                    </div>
+                    {% else %}
+                    <h1 class="blog-article__title">
+                        <a href="{{ post.url }}">
+                            {% endif %}
+                            {{ post.title }}
+                        </a>
+                    </h1>
+            </article>
+            {% endunless %}
             {% endfor %}
         </div>
     </div>
@@ -33,15 +33,15 @@ page-class: page--home
 <nav class="navigation-wrapper">
     <ul class="nav nav--paging">
         {% if paginator.previous_page %}
-            <li class="paging__prev animate">
-                <a href="{{ paginator.previous_page_path }}">&lt; Prev</a>
-            </li>
+        <li class="paging__prev animate">
+            <a href="{{ paginator.previous_page_path }}">&lt; Prev</a>
+        </li>
         {% endif %}
 
         {% if paginator.next_page %}
-            <li class=" nav--horiz__item paging__next animate">
-                <a href="{{ paginator.next_page_path }}">Next ></a>
-            </li>
+        <li class=" nav--horiz__item paging__next animate">
+            <a href="{{ paginator.next_page_path }}">Next ></a>
+        </li>
         {% endif %}
     </ul>
 </nav>
