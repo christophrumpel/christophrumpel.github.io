@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Liechtenecker is dead, long live Liechtenecker"
-article_description: "Liechtenecker is dead, long live Liechtenecker"
+article_description: "Today is a big day! At work we launched our new Liechtenecker website. But it is much more than just a redesign. It is showing our transformation from a classic digital agency to our new Liechtenecker Lab. Let me tell you all about that from my point of view."
 ---
 
 
