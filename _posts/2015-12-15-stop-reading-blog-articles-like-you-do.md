@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Stop reading blog articles like you do"
+article_description: "Everybody tells you to read blog articles to keep yourself up to date and to become a better developer. I want to share with you my thoughts about this topic and what they don’t tell you about it."
 ---
 
 

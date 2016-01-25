@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "What I learned in 2015"
+article_description: "So this is the last day of 2015. Time do a little recap. A lot of things happened this year and I am glad I can say I learned a lot!..."
 ---
 
 
