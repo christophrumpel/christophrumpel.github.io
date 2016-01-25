@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Liechtenecker is dead, long live Liechtenecker"
+article_description: "Liechtenecker is dead, long live Liechtenecker"
 ---
 
 
