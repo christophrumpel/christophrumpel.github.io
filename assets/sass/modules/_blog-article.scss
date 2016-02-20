@@ -176,6 +176,11 @@
             color: #c7254e;
             font-size: 16px;
             @include x-rem(margin, 20px 0);
+            
+            a {
+                color: #c7254e;
+                text-decoration: underline;
+            }
         }
     }
 }
