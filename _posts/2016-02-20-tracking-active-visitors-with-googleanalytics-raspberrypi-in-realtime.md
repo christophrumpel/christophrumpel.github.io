@@ -245,7 +245,7 @@ will pass the user's country and city to the display and the led will blink.
 The beginning of the `control_led_and_display.py` script is all about settings. Afterwards you will find the more 
 interesting part. See this part below.
 
-{% highlight PHP startinline %}
+{% highlight python startinline %}
 
 ...
 # PubNub Settings
