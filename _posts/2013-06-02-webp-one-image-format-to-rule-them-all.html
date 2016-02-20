@@ -49,7 +49,7 @@ if ( !Modernizr.webp ) {
 <p>We saw that the client-side implementation isn't very satisfying. What can do on the server?</p>
 <p>An interesting technique here is to <code>write a rule for file formats</code>. First we are going to check browser support for WebP. If this is true, then we are going to deliver different files from the ones requested to the browser. Let's take a look at the code.</p>
 
-{% highlight Apache config files startinline %}
+{% highlight conf config files startinline %}
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteCond %{HTTP_USER_AGENT} !(Chrome\/[0-8]|Android\s[0-3])\.
