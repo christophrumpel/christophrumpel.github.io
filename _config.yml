@@ -4,7 +4,7 @@ url: "http://christoph-rumpel.com"
 exclude: ['README.md', 'sass/']
 paginate: 8
 paginate_path: /blog/page/:num
-markdown: rouge
+markdown: kramdown
 permalink: /:year/:month/:title
 highlighter: pygments
 gems: [jekyll-paginate]
