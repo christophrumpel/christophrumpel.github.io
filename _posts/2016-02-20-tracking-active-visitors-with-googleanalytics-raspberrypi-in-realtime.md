@@ -9,8 +9,6 @@ article_description: "At the beginning of this year I fell in love with a tiny o
 At the beginning of this year I fell in love with a tiny one-chip computer called Raspberry Pi. After some time of playing around I thought it was time for a real first project.
 </header>
 
-<img  class="alignnone" style="max-width: 100%; height: auto;" src="/assets/post-images/remote_tracking-1_web.jpg" alt="Close up of the LED of the installatioN">
-
 ## Raspberry what?
 
 Raspberry Pi is small full-functional one-chip computer. It was built for educational purposes but because of its size 
