@@ -13,9 +13,10 @@ At the beginning of this year I fell in love with a tiny one-chip computer calle
 
 ## Raspberry what?
 
-Raspberry Pi is small full-functional one-chip computer. It was built for educational purposes but because of its size 
-it is now widely used. It is so small that you can hide it very easily. Especially for IoT (Internet of Things) products 
-it is a very popular component.
+If you haven't heard of the Raspberry Pi, let me tell you one thing. `It is a wonderful tiny little piece of technology.`
+Let's image s full functional computer  of the size of credit card. That's what it is! It was built for educational purposes but because of its size it is now widely used. It is so small that you can hide it very easily. Especially for IoT (Internet of Things) products it is a very popular component.
+
+<blockquote>The Raspberry Pi® is a single-board computer developed in the UK by the Raspberry Pi Foundation with the intention of stimulating the teaching of basic computer science in schools. (adafruit)</blockquote>
 
 ## Hello World
 
@@ -71,9 +72,12 @@ Also make sure to provide the Google API PHP client library at the correct locat
 Inside the `$optParams` we define the additional real-time data we need. Because of that we are able to show the user's country and city on the display.
 
 {% highlight PHP startinline %}
+<?php
+...
 $optParams = array(
     'dimensions' => 'rt:medium,rt:city,rt:country'
 );
+...
 {% endhighlight PHP startinline %}
 
 After receiving the data we want to send it to the our PubNub app.
@@ -82,6 +86,7 @@ We are publishing the data to a PubNub Channel called `analytics-channel`. If th
 
 
 {% highlight PHP startinline %}
+<?php
 ...
 $activeUserCount = $results->totalsForAllResults['rt:activeUsers'];
 $country = $results->getRows()[0][2];
