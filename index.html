@@ -12,17 +12,20 @@ page-class: page--home
             <article class="blog-article blog-article--preview{% if post.external_url %} blog-article--external-preview{% endif %}" role="article">
                 <header class="blog-article__date">{{ post.date | date: "%B %d, %Y" }}</header>
                 {% if post.external_url %}
-                <a href="{{ post.external_url }}">
-                    <div class="external-preview__sign-wrapper">
-                        <img class="external-preview__arrow" src="/assets/images/arrow.png" alt="Extern Link Arrow"/>
-                    </div>
-                    {% else %}
-                    <h1 class="blog-article__title">
-                        <a href="{{ post.url }}">
-                            {% endif %}
-                            {{ post.title }}
-                        </a>
-                    </h1>
+                <h1 class="blog-article__title">
+                    <a href="{{ post.external_url }}">
+                        {{ post.title }}
+                        <div class="external-preview__sign-wrapper">
+                            <img class="external-preview__arrow" src="/assets/images/arrow.png" alt="Extern Link Arrow"/>
+                        </div>
+                    </a>
+                </h1>
+                {% else %}
+                <h1 class="blog-article__title">
+                    <a href="{{ post.url }}">{{ post.title }}</a>
+                </h1>
+                {% endif %}
+
             </article>
             {% endunless %}
             {% endfor %}
