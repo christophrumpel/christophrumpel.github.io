@@ -12,7 +12,7 @@ var livereload  = require('gulp-livereload')
 var paths = {
     sass: './sass',
     styles: './sass/style.scss',
-    css: './css',
+    css: '../_includes',
     scripts: ['./scripts'],
     origimages: './orig-images',
     images: './images'
