@@ -102,7 +102,7 @@ finally got the solution. (Big thx to [@jstoone](https://twitter.com/jstoone))
 Here is an example of a .vue component. It just outputs a headline with a certain message. This will be our example .vue
  file.
 
-{% highlight plaintext startinline %}
+{% highlight HTML startinline %}
 <template>
     <h1 class="helloMessage">{{ message }}</h1>
 </template>
@@ -130,7 +130,7 @@ Here is an example of a .vue component. It just outputs a headline with a certai
         text-align: center;
     }
 </style>
-{% endhighlight plaintext startinline %}
+{% endhighlight HTML startinline %}
 
 ### 1. Adding a global .vue component
 
