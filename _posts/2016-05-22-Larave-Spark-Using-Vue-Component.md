@@ -104,7 +104,7 @@ Here is an example of a .vue component. It just outputs a headline with a certai
 
 {% highlight plaintext startinline %}
 <template>
-    <h1 class="helloMessage">1{{ message }}</h1>
+    <h1 class="helloMessage">{{ message }}</h1>
 </template>
 
 <script>
