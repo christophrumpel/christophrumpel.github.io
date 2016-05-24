@@ -68,7 +68,7 @@ property.
 ## Vueify to rescue
 Vueify lets you write all your component stuff in one file like this:
 
-{% highlight text startinline %}
+{% raw %}
 // myComponent.vue
 <style>
   .red {
@@ -89,7 +89,7 @@ export default {
   }
 }
 </script>
-{% endhighlight text startinline %}
+{% endraw %}
   
 Isn't that great? Every time you want to change something in your component there is only one place you need to look.
 
@@ -102,7 +102,7 @@ finally got the solution. (Big thx to [@jstoone](https://twitter.com/jstoone))
 Here is an example of a .vue component. It just outputs a headline with a certain message. This will be our example .vue
  file.
 
-{% highlight HTML startinline %}
+{% highlight plaintext startinline %}
 <template>
     <h1 class="helloMessage">{{ message }}</h1>
 </template>
@@ -130,7 +130,7 @@ Here is an example of a .vue component. It just outputs a headline with a certai
         text-align: center;
     }
 </style>
-{% endhighlight HTML startinline %}
+{% endhighlight plaintext startinline %}
 
 ### 1. Adding a global .vue component
 
