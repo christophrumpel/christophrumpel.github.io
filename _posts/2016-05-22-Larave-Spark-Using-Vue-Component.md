@@ -68,7 +68,7 @@ property.
 ## Vueify to rescue
 Vueify lets you write all your component stuff in one file like this:
 
-{% raw %}
+{% highlight text startinline %}
 // myComponent.vue
 <style>
   .red {
@@ -77,7 +77,7 @@ Vueify lets you write all your component stuff in one file like this:
 </style>
 
 <template>
-  <h1 class="red">{{msg}}</h1>
+  <h1 class="red">{{ "{{ msg " }}}}</h1>
 </template>
 
 <script>
@@ -89,7 +89,7 @@ export default {
   }
 }
 </script>
-{% endraw %}
+{% endhighlight text startinline %}
   
 Isn't that great? Every time you want to change something in your component there is only one place you need to look.
 
@@ -104,7 +104,7 @@ Here is an example of a .vue component. It just outputs a headline with a certai
 
 {% highlight plaintext startinline %}
 <template>
-    <h1 class="helloMessage">{{ message }}</h1>
+    <h1 class="helloMessage">{{ "{{ message " }}}}</h1>
 </template>
 
 <script>
