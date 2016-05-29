@@ -142,9 +142,9 @@ require('spark-bootstrap');
 
 require('./components/bootstrap');
 
-import Hello from './components/Hello.vue'; (new)
+import Hello from './components/Hello.vue'; // (new)
 
-Vue.component('hello', Hello); (new)
+Vue.component('hello', Hello); // (new)
 
 var app = new Vue({
     mixins: [require('spark')],
