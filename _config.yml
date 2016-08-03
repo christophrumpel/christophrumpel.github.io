@@ -5,6 +5,6 @@ exclude: ['README.md', 'sass/']
 paginate: 8
 paginate_path: /blog/page/:num
 markdown: kramdown
-permalink: /:year/:month/:title
+permalink: /:year/:month/:title/
 highlighter: rouge
 gems: [jekyll-paginate]
