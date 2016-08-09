@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Build a chatbot in PHP in in 10 minutes"
-article_description: "The chatbot topic is huge right now. Finally there is something quite new again and nobody knows what's happening next. This is the perfect change to start experimenting with chatbos and to build your own one right now. Give me 10 minutes of your time and I will give you your first chatbot!"
+title: "Build a PHP chatbot in 10 minutes"
+article_description: "The chatbot topic is huge right now. Finally there is something quite new again and nobody knows what's happening next. This is the perfect change to start experimenting with chatbots and to build your own one right now. Give me 10 minutes of your time and I will give you your first chatbot!"
 ---
 
 
 <header>
 The chatbot topic is huge right now. Finally there is something quite new again and nobody knows what's 
-happening next. This is the perfect time to start experimenting with chatbos and to build your own one right now. Give me 10 minutes of your time and I will give you your first chatbot!"
+happening next. This is the perfect time to start experimenting with chatbots and to build your own one right now. Give me 10 minutes of your time and I will give you your first chatbot!
 </header>
 
 ## Shortcut
