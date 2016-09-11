@@ -17,7 +17,9 @@ A Spark installation is built on Laravel, but it is still different from a stand
 
 In order to upgrade the Laravel framework just follow the [upgrade guide](https://laravel.com/docs/5.3/upgrade#upgrade-5.3.0). This may take 2-3 hours of your time.
 
-For me this was the perfect time to try out [Laravel Shift](https://laravelshift.com/). It is an automated way to upgrade Laravel applications. You grant the application access to your repository and it will send a pull request within minutes. This will take care of ~ 90% of the upgrade. Depending on your code, there may be some files that could not be changed. The PR contains comments to let you know about these files. This will save you a lot of time and costs only €9. It is definitely worth the money!
+For me this was the perfect time to try out [Laravel Shift](https://laravelshift.com/). It is an automated way to upgrade Laravel applications. You grant the application access to your repository and it will send a pull request within minutes. This will take care of ~ 90% of the upgrade. Depending on your code, there may be some files that could not be changed. The PR contains comments to let you know about these files. This will save you a lot of time and costs only $9. (costs depending on the shift) It is definitely worth a try and the money!
+
+ <div class="note"><strong>Note:</strong> A shift is an upgrade from specific Laravel versions like from 5.2 to 5.3 in our case.</div>
 
 ## 2. Upgrade Spark
 
