@@ -11,7 +11,7 @@ Laravel 5.3 is out! It is filled with lots of new and exciting features. Of cour
 
 ## The plan
 
-A Spark installation is built on Laravel, but it is still different from a standard Laravel application. Besides the Laravel framework, a little Spark app is living there. With the Spark artisan commands you are able to pull changes and update Spark itself. This is why upgrading a Spark application to Laravel 5.3 needs two steps.
+A Spark installation is built on Laravel, but it is still different from a standard Laravel application. Besides the framework, a little Spark app is living next to your files. With the Spark artisan commands you are able to pull changes and update Spark itself. This is why upgrading a Spark application to Laravel 5.3 needs two steps.
 
 ## 1. Upgrade the framework
 
