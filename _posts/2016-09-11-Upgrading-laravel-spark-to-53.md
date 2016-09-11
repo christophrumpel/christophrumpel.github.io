@@ -25,7 +25,7 @@ For me this was the perfect time to try out [Laravel Shift](https://laravelshift
 
 <blockquote>Several have asked if Spark upgrade to Laravel 5.3 will be a paid upgrade. It won't. It will be a free upgrade. (Taylor Otwell)</blockquote>
 
-So luckily Taylor made this Spark upgrade free. So all we have to do now is call the command `php artisan spark:update`. No we are running the latest Spark version already using Laravel 5.3.
+So luckily Taylor made this Spark upgrade free. So all we have to do now, is call the command `php artisan spark:update`. Now we got the latest Spark version running on Laravel 5.3.
 
  <div class="note"><strong>Note:</strong> If you run into this error "Trait method hasTooManyLoginAttempts has not been applied, because there are collisions with other trait methods", checkout my reply <a href="https://laracasts.com/discuss/channels/spark/laravel-53-and-spark/replies/192744)">here</a>.</div>
 
