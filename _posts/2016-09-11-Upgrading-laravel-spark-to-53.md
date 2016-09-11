@@ -15,7 +15,7 @@ A Spark installation is built on Laravel, but it is still different from a stand
 
 ## 1. Upgrade the framework
 
-In order to upgrade the Laravel framework just follow the [upgrade guide](https://laravel.com/docs/5.3/upgrade#upgrade-5.3.0). This may take 2-3 hours of your time.
+In order to upgrade the Laravel framework just follow the [upgrade guide](https://laravel.com/docs/5.3/upgrade#upgrade-5.3.0). This can take up to 3 hours.
 
 For me this was the perfect time to try out [Laravel Shift](https://laravelshift.com/). It is an automated way to upgrade Laravel applications. You grant the application access to your repository and it will send a pull request within minutes. This will take care of ~ 90% of the upgrade. Depending on your code, there may be some files that could not be changed. The PR contains comments to let you know about these files. This will save you a lot of time and costs only $9. (costs depending on the shift) It is definitely worth a try and the money!
 
@@ -25,7 +25,7 @@ For me this was the perfect time to try out [Laravel Shift](https://laravelshift
 
 <blockquote>Several have asked if Spark upgrade to Laravel 5.3 will be a paid upgrade. It won't. It will be a free upgrade. (Taylor Otwell)</blockquote>
 
-So luckily Taylor made this Spark upgrade free. So all we have to do now, is call the command `php artisan spark:update`. Now we got the latest Spark version running on Laravel 5.3.
+So luckily Taylor made this Spark upgrade free. So all we have to do now, is calling the update command: `php artisan spark:update`. Now we got the latest Spark version running on Laravel 5.3.
 
  <div class="note"><strong>Note:</strong> If you run into this error "Trait method hasTooManyLoginAttempts has not been applied, because there are collisions with other trait methods", checkout my reply <a href="https://laracasts.com/discuss/channels/spark/laravel-53-and-spark/replies/192744)">here</a>.</div>
 
