@@ -11,6 +11,8 @@ Laravel Spark is out and it is really exciting to work with. But it is different
 show you how to use a Vue component in Spark.
 </header>
 
+ <div class="note"><strong>Note:</strong> If your are already using Spark 3, checkout my article [Laravel Spark 3 and Vue components](http://christoph-rumpel.com/2016/11/Larave-Spark-3-Using-Vue-Components/) </div>
+
 ## Laravel and Vue
 
 Vue.js is a lightweight modern JavaScript framework that is very popular these days. Especially when you do not want the 
