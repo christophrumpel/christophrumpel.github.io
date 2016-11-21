@@ -109,7 +109,7 @@ alt="Close up image of the relay">
 ## Conclusion
 
 As you could see the harder part is updating your Vue.js components to the new version. Using .vue components is very 
-straight forward again. Let me know if you ran into other problems.
+straight forward again because Laravel is helping us a lot under the hood. Let me know if you ran into other problems.
 
 
 
