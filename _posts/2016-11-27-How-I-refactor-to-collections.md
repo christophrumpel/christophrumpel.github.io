@@ -6,7 +6,7 @@ article_description: "Refactoring to Collections is a great book by Adam Wathan 
 
 
 <header>
-<a href="https://adamwathan.me/refactoring-to-collections">Refactoring to Collections</a> is a great book by Adam Wathan where he demonstrates, how you can avoid loops by using collections. It sounds great from the beginning, but you need to practice it, in order to be able to use in your own projects. This is why I refactored some conditional code of my older projects. I want to share these examples today.
+<a href="https://adamwathan.me/refactoring-to-collections">Refactoring to Collections</a> is a great book by Adam Wathan where he demonstrates, how you can avoid loops by using collections. It sounds great from the beginning, but you need to practice it, in order to be able to use it in your own projects. This is why I refactored some of my older projects. I want to share these examples today with you.
 </header>
 
 <div class="note"><strong>Note:</strong> Code examples are from Laravel projects where collections are built-in.</div>
