@@ -9,7 +9,7 @@ article_description: "Refactoring to Collections is a great book by Adam Wathan 
 <a href="https://adamwathan.me/refactoring-to-collections">Refactoring to Collections</a> is a great book by Adam Wathan where he demonstrates, how you can avoid loops by using collections. It sounds great from the beginning, but you need to practice it, in order to be able to use it in your own projects. This is why I refactored some of my older projects. I want to share these examples today with you.
 </header>
 
-<div class="note"><strong>Note:</strong> Code examples are from Laravel projects where collections are built-in.</div>
+<div class="note"><strong>Note:</strong> Code examples are from Laravel projects where collections are built-in. If you want to use them outside of Laravel you can use the <a href="https://github.com/tightenco/collect">Tighten Co. collect</a> or the <a href="https://github.com/lasso/Enumerable.php/wiki">enumerable</a> package.</div>
 
 ## Example 1
 
