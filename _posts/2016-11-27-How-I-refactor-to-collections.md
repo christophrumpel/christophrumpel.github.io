@@ -13,7 +13,7 @@ article_description: "Refactoring to Collections is a great book by Adam Wathan 
 
 ## Example 1
 
-Here I needed to built a string from an array to create an unique cache key for given search filters. When you first look at the before and after examples, you could question if the collection version is a better choice here. This is because it looks a little bit more complex. But this is just the first impression. The collection version of this code has some great benefits:
+Here I needed to build a string from an array to create an unique cache key for given search filters. When you first look at the before and after examples, you could question if the collection version is a better choice here. This is because it looks a little bit more complex. But this is just the first impression. The collection version of this code has some great benefits:
 
 * as always with collections, the code tells you more about what is happening
 * it separates steps and helps you do one thing after the other
@@ -31,7 +31,7 @@ foreach ($filters as $key => $item) {
 {% endhighlight php startinline %}
 
 
-### Afterwords
+### Afterwards
 {% highlight PHP startinline %}
 <?php
 ...
@@ -60,7 +60,7 @@ foreach ($steps as $step) {
 {% endhighlight php startinline %}
 
 
-### Afterwords
+### Afterwards
 {% highlight PHP startinline %}
 <?php
 ...
@@ -95,7 +95,7 @@ $twitterMessage->imageIds = $mediaIds;
  <div class="note"><strong>Note:</strong> For better readability I did shorten some names in the code example.</div>
 
 
-### Afterwords
+### Afterwards
 {% highlight PHP startinline %}
 <?php
 ...
@@ -143,7 +143,7 @@ return false;
 {% endhighlight php startinline %}
 
 
-### Afterwords
+### Afterwards
 {% highlight PHP startinline %}
 <?php
 ...
