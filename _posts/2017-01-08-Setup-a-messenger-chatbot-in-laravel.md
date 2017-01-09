@@ -43,7 +43,7 @@ TOKEN_VERIFY=your-wehbook-verify-token
 FACEBOOK_APP_SECRET=your-facebook-app-secret
 {% endhighlight TEXT startinline %}
 
-Also make sure you have these Facebook settings inside you `config/services.php`
+Also make sure you have these Facebook settings inside you `config/services.php`:
 
 {% highlight PHP startinline %}
 <?php
