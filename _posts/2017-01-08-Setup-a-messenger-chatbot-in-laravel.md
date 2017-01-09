@@ -40,7 +40,21 @@ Now we are ready to copy our Facebook Messenger tokens to our `.env` file. We ne
 // ...inside .env file
 FACEBOOK_TOKEN=your-facebook-page-token
 TOKEN_VERIFY=your-wehbook-verify-token
+FACEBOOK_APP_SECRET=your-facebook-app-secret
 {% endhighlight TEXT startinline %}
+
+Also make sure you have these Facebook settings inside you `config/services.php`
+
+{% highlight PHP startinline %}
+<?php
+// ..
+'botman' => [
+	// ...
+	'facebook_token' => env('FACEBOOK_TOKEN'),
+	'facebook_app_secret' => env('FACEBOOK_APP_SECRET')
+],
+// ..
+{% endhighlight PHP startinline %}
 
 Your application needs to be available for the Facebook webhook. I am using [Laravel valet](https://laravel.com/docs/master/valet) to generate a public HTTPS URL.
 {% highlight Shell startinline %}
