@@ -18,7 +18,7 @@ It is because of the architecture of our applications. A lot of Laravel applicat
 
 ## Laravel 5.4 and Dusk
 
-With the upcoming release there will be also a change in Laravel testing. Until now tests in Laravel were separated in `Unit` and `Application` tests. The second one provided a lot of methods for testing HTTP request or browser behavior. (visit, click, see etc.) Laravel uses the Symfony BrowserKit component to simulate a web browser. This was quite fine but it is still not a real browser.
+With the upcoming release there will be also a change in Laravel testing. Until now tests in Laravel were separated in `Unit` and `Application` tests. The second one provided a lot of methods for testing HTTP request or browser behaviour. (visit, click, see etc.) Laravel uses the Symfony BrowserKit component to simulate a web browser. This was quite fine but it is still not a real browser.
 
 
 In Laravel 5.4 this will change. By default the application holds a `Feature` and a `Unit` directory for tests. Feature tests are similar to Application tests, but there is no more browser stuff included. So if you want to `visit` a page, `click` a link or `see` some text you will need to pull in Dusk. Everything regarding browser automation will be part of Dusk.
@@ -75,7 +75,7 @@ public function testBasicExample()
 ...
 {% endhighlight PHP startinline %}
 
-This is similar to the old default test, but now it is using the ChromDriver. We are using the `browse` method which accepts a callback. Within this callback we get our main browser instance which we use for our assertison. There is a separate artisan command to start Dusk tests:
+This is similar to the old default test, but now it is using the ChromDriver. We are using the `browse` method which accepts a callback. Within this callback we get our main browser instance which we use for our assertion. There is a separate artisan command to start Dusk tests:
 
 {% highlight Shell startinline %}
 php artisan dusk
@@ -85,7 +85,7 @@ This should pass and result in `OK (1 test, 1 assertion)`. Gratulations! This wa
 
 ### The best reason to wait
 
-Instead of waiting for your whole frontend to be loaded, Dusk lets you wait for certain elements and conditons.
+Instead of waiting for your whole front-end to be loaded, Dusk lets you wait for certain elements and conditions.
 
 {% highlight PHP startinline %}
 <?php
