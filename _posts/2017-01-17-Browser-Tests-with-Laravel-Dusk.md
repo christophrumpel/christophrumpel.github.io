@@ -85,7 +85,7 @@ php artisan dusk
 
 This should pass and result in `OK (1 test, 1 assertion)`. Gratulations! This was your first Dusk test! You probably saw the browser popping up for a second. This was your test. 👍
 
-### The best reason to wait
+### The fun side of waiting
 
 Instead of waiting for your whole front-end to be loaded, Dusk lets you wait for certain elements and conditions.
 
@@ -128,6 +128,39 @@ $browser->waitUntil('appLoaded');
 $browser->waitUntil('users > 0');
 ...
 {% endhighlight PHP startinline %}
+
+### Change text with JavaScript
+
+Sometimes you need to change text with JavaScript. With Dusk you can now test this scenarios. As a quick example let's change the Laravel welcome blade title after two seconds. Add this script to your `welcome.blade.php` view and give the Laravel title an id of "title".
+{% highlight Html startinline %}
+<script>
+	setTimeout(function(){
+		document.getElementById("title").innerHTML = "Dusk";
+	}, 2000);
+</script>
+{% endhighlight Html startinline %}
+
+And now make two tests to check for the text before and after.
+
+{% highlight PHP startinline %}
+<?php
+...
+$this->browse(function ($browser) {
+	$browser->visit('/')
+		->assertSee('Laravel');
+});
+
+$this->browse(function ($browser) {
+	$browser->visit('/')
+		->waitForText('Dusk')
+		->assertSee('Dusk');
+});
+...
+{% endhighlight PHP startinline %}
+
+Here is an animation showing the test.
+
+<img class="alignnone" style="max-width: 100%; height: auto;" alt="Gif showing how the Dusk test passes" src="/assets/post-images/dusk.gif" width="700" />
 
 <div class="note"><strong>Note:</strong> Check out <a href="https://laravel.com/docs/master/dusk#available-assertions">the docs</a> for all the possible assertions.</div>
 
