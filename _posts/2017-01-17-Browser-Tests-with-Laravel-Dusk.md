@@ -75,7 +75,7 @@ public function testBasicExample()
 ...
 {% endhighlight PHP startinline %}
 
-This is similar to the old default test, but now it is using the ChromDriver. There is a separate artisan command to start Dusk tests:
+This is similar to the old default test, but now it is using the ChromDriver. We are using the `browse` method which accepts a callback. Within this callback we get our main browser instance which we use for our assertison. There is a separate artisan command to start Dusk tests:
 
 {% highlight Shell startinline %}
 php artisan dusk
@@ -128,6 +128,32 @@ $browser->waitUntil('users > 0');
 {% endhighlight PHP startinline %}
 
 <div class="note"><strong>Note:</strong> Check out <a href="https://laravel.com/docs/master/dusk#available-assertions">the docs</a> for all the possible assertions.</div>
+
+### One browser is not enough
+
+Now that we got one real browser, why not use two? "Why could we need two?", you might ask. Let's consider we are using Laravel envent broadcasting for a simple chat. With Dusk you could now test if browser two sees what browser one is sending. This is the example from the official docs.
+
+{% highlight PHP startinline %}
+<?php
+...
+$this->browse(function ($first, $second) {
+    $first->loginAs(User::find(1))
+            ->visit('/home')
+            ->waitForText('Message');
+
+    $second->loginAs(User::find(2))
+            ->visit('/home')
+            ->waitForText('Message')
+            ->type('message', 'Hey Taylor')
+            ->press('Send');
+
+    $first->waitForText('Hey Taylor')
+           ->assertSee('Jeffrey Way');
+});
+...
+{% endhighlight PHP startinline %}
+
+Let's face it: This is amazing! As you read the code you know exactly what we want to test and the fact that this is possible is even better.
 
 ## Conclusion
 
