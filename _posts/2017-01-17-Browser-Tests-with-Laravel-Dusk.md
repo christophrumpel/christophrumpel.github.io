@@ -157,7 +157,7 @@ Let's face it: This is amazing! As you read the code you know exactly what we wa
 
 ## Conclusion
 
-Now that we got a real browser integration in Laravel there should be no more excuses for not testing! There is still a lot to write about Dusk, but I guess it was enough for now. Maybe there will be a follow up explaining more. 🤠 I am really excited to dig deeper into Dusk and to use it in one of my projects. Let me know what your favourite feature is. Keep testing ;-)
+Now that we got a real browser integration in Laravel there should be no more excuses for not testing! There is still a lot to write about Dusk, but I guess it was enough for now. Maybe there will be a follow up explaining more. 🤠 I am really excited to dig deeper into Dusk and to use it in one of my daily projects. Let me know what your favourite feature is. Keep testing ;-)
  
 
 
