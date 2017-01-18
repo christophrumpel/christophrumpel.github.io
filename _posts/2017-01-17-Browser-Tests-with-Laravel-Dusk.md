@@ -21,7 +21,7 @@ It is because of the architecture of our applications. A lot of Laravel applicat
 With the upcoming release there will be also a change in Laravel testing. Until now tests in Laravel were separated in `Unit` and `Application` tests. The second one provided a lot of methods for testing HTTP request or browser behaviour. (visit, click, see etc.) Laravel uses the Symfony BrowserKit component to simulate a web browser. This was quite fine but it is still not a real browser.
 
 
-In Laravel 5.4 this will change. By default the application holds a `Feature` and a `Unit` directory for tests. Feature tests are similar to Application tests, but there is no more browser stuff included. So if you want to `visit` a page, `click` a link or `see` some text you will need to pull in Dusk. Everything regarding browser automation will be part of Dusk.
+In Laravel 5.4 this will change. By default the application holds a `Feature` and a `Unit` directory for tests. Feature tests are similar to Application tests, but there is no more browser stuff included. So if you want to `visit` a page, `click` a link or `see` some text you will need to pull in Dusk. Everything regarding browser automation will be part of Dusk and this time we will have a real browser available.
 
 <blockquote>Laravel Dusk provides an expressive, easy-to-use browser automation and testing API. </blockquote>
 <p class="quote-author">Taylor Otwell</p>
@@ -75,7 +75,7 @@ public function testBasicExample()
 ...
 {% endhighlight PHP startinline %}
 
-This is similar to the old default test, but now it is using the ChromDriver. We are using the `browse` method which accepts a callback. Within this callback we get our main browser instance which we use for our assertion. There is a separate artisan command to start Dusk tests:
+This is similar to the old default test, but now it is using the ChromeDriver. We are using the `browse` method which accepts a callback. Within this callback we get our main browser instance which we use for our assertion. There is a separate artisan command to start Dusk tests:
 
 {% highlight Shell startinline %}
 php artisan dusk
@@ -161,9 +161,19 @@ I would recommend smiling while you use Dusk. This is because it will take a pho
 
 So let's be serious again. This feature is extremely useful. When a test fails you can checkout the screenshot at the time of the failure. This can help you to identify the problem. Be careful, because screenshots get deleted when you run `php artisan dusk` again. They are located at `tests/Browser/screenshots`.
 
+
+
+
+
 ## Conclusion
 
 Now that we got a real browser integration in Laravel there should be no more excuses for not testing! There is still a lot to write about Dusk, but I guess it was enough for now. Maybe there will be a follow up explaining more. 🤠 I am really excited to dig deeper into Dusk and to use it in one of my daily projects. Let me know what your favourite feature is. Keep testing ;-)
+
+More Dusk resources:
+
+* [Official docs](https://laravel.com/docs/master/dusk)
+* [Laracasts](https://laracasts.com/series/whatcha-working-on/episodes/10)
+* [GitHub](https://github.com/laravel/dusk)
  
 
 
