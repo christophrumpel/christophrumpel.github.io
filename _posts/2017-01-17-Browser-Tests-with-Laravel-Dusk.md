@@ -157,7 +157,7 @@ Let's face it: This is amazing! As you read the code you know exactly what we wa
 
 ## Smile when you fail
 
-I would recommend smiling while coding with Dusk. This is because it will take a photo when a test fails. Ok probably it will just take a screenshot, but a picture of your face while a test fails would be fun too ;-)
+I would recommend smiling while you use Dusk. This is because it will take a photo of you when a test fails. Ok probably it will just take a screenshot, but a picture of your face while a test fails would be fun too ;-)
 
 So let's be serious again. This feature is extremely useful. When a test fails you can checkout the screenshot at the time of the failure. This can help you to identify the problem. Be careful, because screenshots get deleted when you run `php artisan dusk` again. They are located at `tests/Browser/screenshots`.
 
