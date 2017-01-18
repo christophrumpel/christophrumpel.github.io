@@ -10,6 +10,8 @@ article_description: "With Laravel 5.4 there will be also a new testing tool ava
 With Laravel 5.4 there will be also a new testing tool available called Dusk. Do we really need another testing tool? Yes we do! Let’s see why.
 </header>
 
+<div class="note"><strong>Note:</strong> Be aware that both Laravel and Dusk version are not released yet.</div>
+
 ## The pain point
 
 So I guess we are all already at the point where we know that testing is very important. And you probably know that Laravel provides some great [testing features]({% post_url 2015-07-14-start-testing-your-laravel-application-today %}) right out of the box. And of course there are great testing frameworks out there that you can use on top of Laravel like [Behat](http://behat.org/en/latest) or [Codeception](http://codeception.com/). So why do we need something new?
