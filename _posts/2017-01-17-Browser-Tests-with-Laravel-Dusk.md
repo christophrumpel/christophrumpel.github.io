@@ -155,6 +155,12 @@ $this->browse(function ($first, $second) {
 
 Let's face it: This is amazing! As you read the code you know exactly what we want to test and the fact that this is possible is even better.
 
+## Smile when you fail
+
+I would recommend smiling while coding with Dusk. This is because it will take a photo when a test fails. Ok probably it will just take a screenshot, but a picture of your face while a test fails would be fun too ;-)
+
+So let's be serious again. This feature is extremely useful. When a test fails you can checkout the screenshot at the time of the failure. This can help you to identify the problem. Be careful, because screenshots get deleted when you run `php artisan dusk` again. They are located at `tests/Browser/screenshots`.
+
 ## Conclusion
 
 Now that we got a real browser integration in Laravel there should be no more excuses for not testing! There is still a lot to write about Dusk, but I guess it was enough for now. Maybe there will be a follow up explaining more. 🤠 I am really excited to dig deeper into Dusk and to use it in one of my daily projects. Let me know what your favourite feature is. Keep testing ;-)
