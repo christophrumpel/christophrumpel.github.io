@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Browser tests with Laravel Dusk"
-article_description: "With Laravel 5.4 there will be also a new testing tool available called Dusk. Do we really need another testing tool? Yes we do! Let’s see why."
+article_description: "With Laravel 5.4 there will be also a new testing tool available called Dusk. Do we really need another testing tool? Yes we do! Let’s see why.
 "
 ---
 
@@ -14,16 +14,16 @@ With Laravel 5.4 there will be also a new testing tool available called Dusk. Do
 
 So I guess we are all already at the point where we know that testing is very important. And you probably know that Laravel provides some great [testing features]({% post_url 2015-07-14-start-testing-your-laravel-application-today %}) right out of the box. And of course there are great testing frameworks out there that you can use on top of Laravel like [Behat](http://behat.org/en/latest) or [Codeception](http://codeception.com/). So why do we need something new?
 
-It is because of the architecture of our applications. A lot of Laravel applications just handle the backend logic and let JavaScript frameworks like Vue or Angular do the Frontend. This way we can provide a better and faster experience for our users. But with these applications we have a big problem. They get separated in two pieces and it gets much harder to test them.
+It is because of the architecture of our applications. A lot of Laravel applications just handle the backend logic and let JavaScript frameworks like Vue or Angular do the front-end. This way we can provide a better and faster experience for our users. But with these applications we have a big problem. They get separated in two pieces and it gets much harder to test them end to end.
 
 ## Laravel 5.4 and Dusk
 
-With the upcoming release there will be also a change in Laravel testing. Until now Laravel's test were separated in `Unit` and `Application` testing. The second one provided a lot of methods for testing HTTP request or browser behavior. (visit, click, see etc.) Laravel uses the Symfony BrowserKit component to simulate a web browser. This was quite fine but it is still not a real browser.
+With the upcoming release there will be also a change in Laravel testing. Until now tests in Laravel were separated in `Unit` and `Application` tests. The second one provided a lot of methods for testing HTTP request or browser behavior. (visit, click, see etc.) Laravel uses the Symfony BrowserKit component to simulate a web browser. This was quite fine but it is still not a real browser.
 
 
-In Laravel 5.4 this will change. By default the application holds a `Feature` and a `Unit` directory for tests. Feature tests are similar to Application tests but there is no more browser stuff included. So if you want to `visit` a page, `click` a link or `see` some text you will need to pull in Dusk. Everything regarding browser automation will be part of Dusk.
+In Laravel 5.4 this will change. By default the application holds a `Feature` and a `Unit` directory for tests. Feature tests are similar to Application tests, but there is no more browser stuff included. So if you want to `visit` a page, `click` a link or `see` some text you will need to pull in Dusk. Everything regarding browser automation will be part of Dusk.
 
-<blockquote>Laravel Dusk provides an expressive, easy-to-use browser automation and testing API. (Taylor Otwell)</div>
+<blockquote>Laravel Dusk provides an expressive, easy-to-use browser automation and testing API. </blockquote>
 <p class="quote-author">Taylor Otwell</p>
 
 ## Installation
@@ -69,7 +69,7 @@ public function testBasicExample()
 {
 	$this->browse(function ($browser) {
 		$browser->visit('/')
-				->assertSee('Laravel');
+			->assertSee('Laravel');
 	});
 }
 ...
@@ -83,7 +83,7 @@ php artisan dusk
 
 This should pass and result in `OK (1 test, 1 assertion)`. Gratulations! This was your first Dusk test! You probably saw the browser popping up for a second. This was your test. 👍
 
-### It was never happier to wait
+### The best reason to wait
 
 Instead of waiting for your whole frontend to be loaded, Dusk lets you wait for certain elements and conditons.
 
@@ -98,7 +98,23 @@ $this->browse(function ($browser) {
 ...
 {% endhighlight PHP startinline %}
 
-By default it will wait a maximum of 5 seconds for the text. Additionally you can that limit by providing a second parameter: `->waitForText('Hello Dusk!', 1)`
+By default it will wait a maximum of 5 seconds for the text. You can cahnge that limit by providing a second parameter: `->waitForText('Hello Dusk!', 1)`
+
+Beside text you can wait for other elements too:
+
+{% highlight PHP startinline %}
+<?php
+...
+// Wait for a selector
+$browser->waitFor('.selector');
+...
+// Wait for a selector to disapear
+$browser->waitUntilMissing('.selector');
+...
+// Wait for a text link
+$browser->waitForLink('Create');
+...
+{% endhighlight PHP startinline %}
 
 Furthermore you can wait for JavaScript conditions to "come true".
 
@@ -106,7 +122,7 @@ Furthermore you can wait for JavaScript conditions to "come true".
 <?php
 ...
 $browser->waitUntil('appLoaded');
-
+...
 $browser->waitUntil('users > 0');
 ...
 {% endhighlight PHP startinline %}
