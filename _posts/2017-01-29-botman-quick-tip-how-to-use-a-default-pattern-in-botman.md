@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "BotMan Quick Tip - Use a default pattern"
+title: "BotMan Quick Tip - How to use a default pattern"
 article_description: "BotMan is a framework agnostic PHP library for building chatbots. In today's tip I want to show you how to use a default pattern when using an array of callbacks."
 ---
 
