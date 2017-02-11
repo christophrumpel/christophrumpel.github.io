@@ -1,57 +1,86 @@
 .nav {
-	padding: 0;
-	margin: 0;
-	@include clearfix();
+    padding: 0;
+    margin: 0;
+    @include clearfix();
 
-	
-	&.nav--horiz {
-		.nav--horiz__item {
-			float: left;
-			list-style: none;
-		}
-	}
+    &.nav--horiz {
+        .nav--horiz__item {
+            float: left;
+            list-style: none;
+        }
+    }
 
-	&.nav--paging {
-		margin: auto;
-		margin-top: 3rem;
-		text-align: center; 
-		li {
-			background-color: #eee;
-			padding: 5px 10px;
-			text-align: center;
-			width: 45%;
-			display: inline-block;
-			@include x-rem(font-size, 16px);
-			&:hover {
-				background-color: #ddd;
-			}
-			a {
-				text-decoration: none;
-				&:hover {
-					background: none;
-				}
-			}
-			@include respond-to(400) {
-				padding: 0 15px;
-				width: 120px;
-				float: none;
-				@include x-rem(font-size, 20px);
-				
-				&:first-child {
-					margin-right: 10px;  
-				}
-			}
-		}
-	}
-	
-	&.nav--main {
-		color: $text-light-color;
-		@include x-rem(font-size, 20px);
-		float: left;
-		
-		li {
-			padding: 1rem;
-		}
-	}
+    &.nav--paging {
+        margin: auto;
+        margin-top: 3rem;
+        text-align: center;
+        li {
+            background-color: #eee;
+            padding: 5px 10px;
+            text-align: center;
+            width: 45%;
+            display: inline-block;
+            @include x-rem(font-size, 16px);
+            &:hover {
+                background-color: #ddd;
+            }
+            a {
+                text-decoration: none;
+                &:hover {
+                    background: none;
+                }
+            }
+            @include respond-to(400) {
+                padding: 0 15px;
+                width: 120px;
+                float: none;
+                @include x-rem(font-size, 20px);
 
+                &:first-child {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+    &.nav--main {
+        color: $text-light-color;
+        @include x-rem(font-size, 20px);
+        float: left;
+
+        li {
+            padding: 1rem;
+        }
+    }
+}
+
+.mainnav {
+
+    ul {
+        list-style: none;
+        width: 100%;
+        display: flex;
+        margin: 0;
+        padding: 0;
+
+        //> :first-child {
+        //    background: $brand-color;
+        //}
+
+        li {
+            padding: .3em 0;
+            flex: 1 1 auto;
+            text-align: center;
+            background: $brand-color;
+
+            a {
+                color: white;
+                text-decoration: none;
+                
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
 }
