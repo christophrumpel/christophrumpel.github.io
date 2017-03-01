@@ -196,7 +196,7 @@ $replyMessage = $chatbotHelper->getAnswer($message, 'apiai');
 ## Conclusion
 
 You should know have a simple chatbot and a perfect setup for building your own. Try to implement your own logic now to 
-respond to the user's messages. Additionally you should definitely checkout the mentions bot platform [API.ai]http://api.ai) and [WIT.ai](http://wit.ai) to let them help you with the conversations.
+respond to the user's messages. Additionally you should definitely checkout the mentions bot platform [API.ai](http://api.ai) and [WIT.ai](http://wit.ai) to let them help you with the conversations.
 
 This is the first release of the [Chatbot PHP Boilerplate](https://github.com/christophrumpel/chatbot-php-boilerplate) and I'm looking forward to get some feedback. I'm already 
 planning some new features so stay tunes.
