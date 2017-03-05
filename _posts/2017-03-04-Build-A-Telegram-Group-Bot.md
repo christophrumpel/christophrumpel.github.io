@@ -1,19 +1,19 @@
 ---
 layout: post
 title: "Build a Telegram group bot in PHP"
-article_description: "Working with Facebook Messenger bots is great, but there is one thing still missing: group bots! This is why we will build a little Telegram bot today and use it inside a BurgerCrew group."
+article_description: "Working with Facebook Messenger bots is great, but there is one thing still missing: group bots! This is why we will build a little Telegram bot today and use it inside a FantasticBurger group."
 ---
 
 
 <header>
-Working with Facebook Messengers bots is great, but there is one thing still missing: group bots! This is why we will built a little Telegram bot today and use it inside my BurgerCrew group.
+Working with Facebook Messengers bots is great, but there is one thing still missing: group bots! This is why we will built a little Telegram bot today and use it inside my FantasticBurger group.
 </header>
 
 ## Preface
 
 First thing to keep in mind here is that a group chatbot can be very different from a 1:1 conversation chatbot. In groups chatbots are often not a direct conversation partner but more a quiet assistant. They do not need to reply to every message. In fact that would be very annoying :-) 😒 But they can help the group with certain tasks.
 
-With my friends we have a `BurgerCrew group` on Telegram. This is where we chat all day about our favourite topic `Burgers`. 🍔 Once a month we meet to grab one of them and drink some beers. One question we ask a lot is, how long it is till the next event. And this is the one thing our bot will do today. A Telegram command will trigger the bot and he will tell us how many days are left.
+With my friends we have a `FantasticBurger group` on Telegram. This is where we chat all day about our favourite topic `Burgers`. 🍔 Once a month we meet to grab one of them and drink some beers. One question we ask a lot is, how long it is till the next event. And this is the one thing our bot will do today. A Telegram command will trigger the bot and he will tell us how many days are left.
 
 ## Telegram setup
 
@@ -78,7 +78,7 @@ Now that we got everything setup, we are ready to create the logic behind our `/
 ...
  $botman->hears('/countdown', function (BotMan $bot) {
 	$firstName = $bot->getUser()->getFirstName();
-	$bot->reply('Hey ' . $firstName . ', next BurgerCrew event will start in 10 days.');
+	$bot->reply('Hey ' . $firstName . ', next FantasticBurgerGroup event will start in 10 days.');
 });
 ...
 {% endhighlight PHP startinline %}
@@ -99,7 +99,7 @@ Now that the bot is working we just need to add it to a group, like we would wit
 
 ## Conclusion
 
-I hope I could show you today that it is really easy to start a Telegram group bot. With already one command it can be helpful to everyone in this group. Below you will see how I use this bot inside my BurgerCrew group. (German text) I changed his name to `Mr. Burger` and also implemented a joke command that will tell you a Chuck Norris joke ;-) 🤠 
+I hope I could show you today that it is really easy to start a Telegram group bot. With already one command it can be helpful to everyone in this group. Below you will see how I use this bot inside my FantasticBurger group. (German text) I changed his name to `Mr. Burger` and also implemented a joke command that will tell you a Chuck Norris joke ;-) 🤠 
 
 Next time we will enhance this bot to reply automatically without the slash commands. In the meanwhile have fun building bots.
 
