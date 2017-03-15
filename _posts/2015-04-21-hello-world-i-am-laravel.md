@@ -13,7 +13,7 @@ popular PHP frameworks out there. So how does this work together? Let us take
  too. We will go through the main functionalities and talk about brand new features in version 5. 
 </header>
 
-##Intro
+## Intro
 
 Laravel is a PHP full-framework for all kinds of applications. It is built on
  modern PHP standards and best practices with the goal to make high-level 
@@ -23,13 +23,15 @@ For the second time in a row Laravel has won the [SitePoint PHP framework
 survey](http://www.sitepoint.com/best-php-framework-2015-sitepoint-survey-results). Let us take closer look at this framework's components and why 
 you should absolutely know about it.
 
-##Routes
+## Routes
 
 A routes component is fundamental to every framework. It takes the requested URL and decides where to go next.
 
 In the first example we specify that we want to return a "Hello World" string when the user requests the applications root. (e.g. www.myapplication.com).
 
 {% highlight PHP startinline %}
+<?php
+...
 Route::get('/', function()
 {
     return 'Hello World';
@@ -43,12 +45,16 @@ method. In this example the "{id}" would be "1".
 
 
 {% highlight PHP startinline %}
+<?php
+...
 Route::get('user/{id}', 'UserController@showProfile');
 {% endhighlight startinline %}
 
 In both examples we are listening for a GET request. Of course you can use all the other request methods (POST DELETE or PUT) like this too.
 
 {% highlight PHP startinline %}
+<?php
+...
 // More route examples
 Route::post('user', 'UserController@store');
 
@@ -59,7 +65,7 @@ Route::delete('user/{id}', 'UserController@delete');
 
 Now that we know about the roads we can go, let's grab some data on the way.
 
-##Eloquent
+## Eloquent
 
 Eloquent is the Object Relational Mapper of Laravel(ORM). ORMs allow us to 
 map our application objects to database tables. For example if we are 
@@ -70,6 +76,8 @@ The only thing we need for working with Eloquent is a model per database table
 that extends the Model class.
 
 {% highlight PHP startinline %}
+<?php
+...
 class User extends Model {
 
     protected $table = 'my_users';
@@ -84,6 +92,8 @@ with the name of the table.
 Now we are good to go for some basic Eloquent magic.
 
 {% highlight PHP startinline %}
+<?php
+...
 // Get all users
 User::all();
 
@@ -99,6 +109,8 @@ User::where('name', 'Jim')->first();
 Aren't these calls really elegant and nice to read? You immediately know what we are doing while reading the code. Let's do some more for creating, reading, updating and deleting. (so called basic CRUD functions)
 
 {% highlight PHP startinline %}
+<?php
+...
 // Create
 $user = new User;
 $user->name = 'Jim';
@@ -120,13 +132,15 @@ with Eloquent like working with relations, eager loading and collections.
 <div class="note"><strong>Note:</strong> Using Laravel's ORM is not a must, but I haven't had a project without it.</div>
 
 
-##Facades
+## Facades
 
 In Laravel you have access to framework objects through Facades. They look 
 like calling static methods, but that's not completely the case. In fact a 
 non-static method is called under the hood. Laravel just makes use of the simple syntax. This can be a little bit confusing at the beginning but it also makes using these classes damn simple. 
 
 {% highlight PHP startinline %}
+<?php
+...
 // Using Laravel Cache Facade
 $value = Cache::get('key');
 
@@ -140,7 +154,7 @@ if (Auth::check())
 You can also define Facades yourself. A lot of Laravel packages are using 
 them too. So remember, Facades are little helpers for calling Laravel classes.
 
-##Artisan
+## Artisan
 
 Every good framework has a command-line interface(CLI). Laravel's is called 
     Artisan and is build on the Symfony console. Artisan provides helpful 
@@ -162,7 +176,7 @@ php artisan migrate:make create_users_table
 Make sure to checkout all the other Artisan commands too. They will help you 
 develop faster and you do have to take care of the boring stuff.
 
-##Controller
+## Controller
 
 As we have already seen it is possible to respond to routes directly in our `routes.php` file. This is for some cases ok, but we want a cleaner way. 
 Controllers will help us structuring our applications. Our routes will 
@@ -173,7 +187,8 @@ The controller example receives an `$id` from our route `Route::get
 view with the data of the user with the given id.
 
 {% highlight PHP startinline %}
-<?php namespace App\Http\Controllers;
+<?php
+namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 
@@ -193,7 +208,7 @@ class UserController extends Controller {
 }
 {% endhighlight startinline %}
 
-###Resource Controller
+### Resource Controller
 
 There is a good chance that when we are working with our database objects
 (resources in this case), that we want to perform almost the same actions 
@@ -213,6 +228,8 @@ This is true for photos, posts, comments and other typical resources. In a
 lame world we would have to write routes for all theses actions that are 
 linked to controller methods. This would look something like that.
 {% highlight PHP startinline %}
+<?php
+...
 Route::get('/photo', 'PhotoController@index');
 
 Route::get('/photo/create', 'PhotoController@create');
@@ -241,6 +258,8 @@ This is where Laravel's `RESTful resource controller` comes handy. An Artisan co
 This will do two things. First it will create a PhotoController with methods for index, create, store, show, edit, update and destroy. And secondly you can use the resource route for connecting all these methods to routes.
 
 {% highlight PHP startinline %}
+<?php
+...
 // Defining a resource route
 Route::resource('photo', 'PhotoController');
 {% endhighlight startinline %}
@@ -253,7 +272,7 @@ helps you concentrate on building your app.
 routes" />
 
 
-##Migrations
+## Migrations
 
 We all have been there. You are starting a project and after some time you 
 notice that you need another table or column. Ok, you could just add it to 
@@ -314,7 +333,7 @@ In Laravel you can run migrations with the artisan command `php artisan
 migrate`. It will check for new migrations and will change your database 
 structure if needed. I wouldn't want to work without them anymore!
 
-##Form requests
+## Form requests
 
 This is my favorite Laravel 5 feature and yeah, it has something to do 
 with forms. It's a clean way to validate your forms through custom classes.
@@ -325,6 +344,8 @@ request to validate a new photo's data. Let's take a look at the two important
  methods of the created class.
  
 {% highlight PHP startinline %}
+<?php
+...
 /**
  * Determine if the user is authorized to make this request.
  *
@@ -376,7 +397,7 @@ In the authorize method we determine if the request is authorized.(surprise!)
    Laravel 5 feature</div>
    
 
-##Dependency Injection
+## Dependency Injection
 
 Dependency Injection is a design pattern that avoids hard-coding dependencies. It helps making your application more modular and prevents you from having tightly coupled classes. This is helpful for testing too, because you can easily mock the dependency.
 
@@ -384,6 +405,8 @@ Dependency Injection is a design pattern that avoids hard-coding dependencies. I
  Cunningham</blockquote>
 
 {% highlight PHP startinline %}
+<?php
+...
 class UsersController extends BaseController
 {
     public function getIndex()
@@ -399,11 +422,13 @@ building a small project and you do not need / want to test this class. But
 if not, this is bad practice. Our UserController class is `tightly coupled` to 
 the Response class. This is what we want to avoid through dependency injection.
 
-###Constructor injection
+### Constructor injection
 
 One way to solve that would be with constructor injection.
 
 {% highlight PHP startinline %}
+<?php
+...
 class UsersController extends BaseController
 {
     protected $response;
@@ -426,13 +451,15 @@ the class. Laravel knows that you need an object of that class and will get that
 <div class="note"><strong>Note:</strong> Type hinting is when you force 
 parameters to be a specific type.</div>
 
-###Method injection
+### Method injection
 
 Probably you do not need the Response class in all your UserController 
 methods. In this case method injection comes handy. We can inject the class within our getIndex method arguments. Now we do not need the constructor 
 anymore and we save some lines.
 
 {% highlight PHP startinline %}
+<?php
+...
 class UsersController extends BaseController
 { 
 
@@ -447,7 +474,7 @@ class UsersController extends BaseController
 <div class="note"><strong>Note:</strong> Method injection is a brand new 
 Laravel 5 feature</div>
 
-##Conclusion
+## Conclusion
 
 I hope I could show how great it is working with Laravel on your applications. Everything is built to help you working on your projects and to make 
 working fast and fun. Of course these were just the base components you need 
@@ -456,19 +483,19 @@ little tricks
 and features that are available for you. So go and create something amazing now!
 
 
-##More Laravel stuff
+## More Laravel stuff
 
-###Elixir
+## #Elixir
 
 Elixir is an API for writing Gulp tasks in Laravel. Gulp is a JavaScript task
  manager like Grunt. You can manage your assets and automate theses tasks. 
  (minify, concatenate, optimise images, etc.) [Read more](http://laravel.com/docs/5.0/elixir)
 
-###Homestead
+### Homestead
 
 Homestead is a ready to go vagrant box especially optimized for Laravel. [Read more](http://laravel.com/docs/5.0/homestead)
 
-###Laracasts
+### Laracasts
 
 It's the best PHP screencasts on the web. That's what the slogan sounds like,
  and it really is! There is no better web dev teacher I know than Jeffrey Way
@@ -476,20 +503,20 @@ It's the best PHP screencasts on the web. That's what the slogan sounds like,
   up to date with Laravel, PHP and other imported web stuff. I can totally 
   recommend signing Laracasts. [Read more](https://laracasts.com)
 
-###Forge
+### Forge
 
 Forge is a hosting platform for your Laravel sites. It's like a remote 
 Homestead box with a lot of features for your deployment. [Read more]
 (https://forge.laravel.com)
 
-###Envoyer
+### Envoyer
 
 Envoyer is a zero downtime PHP deployment service. It focuses on a simple 
 deployment process for your applications and is perfect in combination with 
 Forge. Both Forge and Envoyer are not Laravel specific. [Read more]
 (https://envoyer.io)
 
-###Lumen
+### Lumen
 
 Lumen is the brand new Laravel micro-framework. It is built to be extremely fast and is faster than other known light frameworks like Slim oder Silex. 
 Every time you need a microservice you can use Lumen without sacrificing the 
