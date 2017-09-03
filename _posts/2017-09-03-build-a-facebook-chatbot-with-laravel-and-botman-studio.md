@@ -115,7 +115,7 @@ You can also write to your page through the [Messenger web app](https://www.mess
 
 <div class="note"><strong>Note:</strong> While your Facebook app or page are not published, your Facebook user needs to be an admin of the page and the app in order to make it work. </div>
 
-Additionally we can test the example conversation, which is built in into BotMan Studio.
+Additionally we can test the example conversation, which is built into BotMan Studio.
 
 <img class="alignnone" style="max-width: 100%; height: auto;" alt="Screenshot showing how to test the BotMan example conversation" src="/assets/post-images/blog_test_conv.png" width="700" />
 

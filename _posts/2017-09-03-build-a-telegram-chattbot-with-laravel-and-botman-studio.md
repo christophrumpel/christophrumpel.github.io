@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "Build a Telegram chatbot in Laravel with BotMan Studio 2.0"
-article_description: "With BotMan it is really easy to setup a Facebook chatbot. This week the new 2.0 version was released. We will checkout how to setup a Facebook Messenger chatbot in this new version with BotMan Studio step by step."
+article_description: "With BotMan it is really easy to setup a Telegram chatbot. This week the new 2.0 version was released. We will checkout how to setup a Telegram chatbot in this new version with BotMan Studio step by step."
 ---
 
 <header>
-With BotMan it is really easy to setup a Facebook chatbot. This week the new 2.0 version was released. We will checkout how to setup a Facebook Messenger chatbot in this new version with BotMan Studio.
+With BotMan it is really easy to setup a Telegram chatbot. This week the new 2.0 version was released. We will checkout how to setup a Telegram chatbot in this new version with BotMan Studio step by step.
 </header>
 
 ## Preparations
@@ -14,8 +14,7 @@ Before we start, make sure to have these things prepared:
 
 * PHP7+ environment
 * [ngrok](https://ngrok.com/) or [Laravel Valet](https://laravel.com/docs/master/valet) to get a public URL to your BotMan app
-* A Facebook Page where your chatbot will live
-* A Facebook App which we will configure together
+* A [Telegram bot](https://core.telegram.org/bots)
 
 ## Install BotMan Studio
 
@@ -28,10 +27,10 @@ composer global require "botman/installer"
 After that you can just install a new instance like that:
 
 {% highlight PowerShell startinline %}
-botman new botman-facebook
+botman new botman-telegram
 {% endhighlight PowerShell startinline %}
 
-It is basically like the Laravel Installer. Your application is now already installed. When you use Laravel Valet you can directly check the homepage, `botman-facebook.dev` in my case. Here you will see the BotMan Studio welcome page.
+It is basically like the Laravel Installer. Your application is now already installed. When you use Laravel Valet you can directly check the homepage, `botman-telegram.dev` in my case. Here you will see the BotMan Studio welcome page.
 
 <img class="alignnone" style="max-width: 100%; height: auto;" alt="Screenshot of the BotMan welcome page" src="/assets/post-images/blog_homepage.png" width="700" />
 
@@ -49,49 +48,50 @@ When you click `Tinker` you can immediately test your chatbot. Type `Hi` and you
 
 ## Configure BotMan Studio
 
-Now that BotMan is installed we need to configure it to work with Facebook Messenger. When you use the BotMan artisan command `php artisan botman:list-drivers` you will see the installed driver.
+Now that BotMan is installed we need to configure it to work with Telegram. When you use the BotMan artisan command `php artisan botman:list-drivers` you will see the installed driver.
 
 <img class="alignnone" style="max-width: 100%; height: auto;" alt="Screenshot showing terminal output for BotMan list driver command" src="/assets/post-images/blog_list_drivers.png" width="700" />
 
-As you can see, by default only the web driver is installed. Since version 2.0 almost all drivers live in separate GitHub repositories and you need to install the ones you need. In order to install the Facebook driver we can use another artisan command.
+As you can see, by default only the web driver is installed. Since version 2.0 almost all drivers live in separate GitHub repositories and you need to install the ones you need. In order to install the Telegram driver we can use another artisan command.
 
 {% highlight PowerShell startinline %}
-php artisan botman:install-driver facebook
+php artisan botman:install-driver telegram
 {% endhighlight PowerShell startinline %}
 
-Next to the driver this will also add a `config/botman/facebook.php`  config file. There you'll see that BotMan requires some data from your `.env` file.
+Next to the driver this will also add a `config/botman/telegram.php`  config file. There you'll see that BotMan requires some data from your `.env` file.
 
-<img class="alignnone" style="max-width: 100%; height: auto;" alt="Screenshot showing facebook botman config file" src="/assets/post-images/blog_config_file.png" width="700" />
+ {% highlight PHP startinline %}
+  <?php
+ ...
+    /*
+    |--------------------------------------------------------------------------
+    | Telegram Token
+    |--------------------------------------------------------------------------
+    |
+    | Your Telegram bot token you received after creating
+    | the chatbot through Telegram.
+    |
+    */
+    'token' => env('TELEGRAM_TOKEN'), 
+ {% endhighlight PHP startinline %}
 
-In order to connect our BotMan application to a Facebook app and page we need these env values:
+In order to connect our BotMan application to a Telegram bot we need the Telegram token. You will receive it when you [create a new bot](https://core.telegram.org/bots) on Telegram. Place it then in your `.env` file.
 
 {% highlight PowerShell startinline %}
-FACEBOOK_TOKEN=YOUR_APP_FACEBOOK_PAGE_TOKEN
-FACEBOOK_APP_SECRET=YOUR_APP_SECRET
-FACEBOOK_VERIFICATION=YOUR_VERIFICATION
+TELEGRAM_TOKEN=YOUR_TELEGRAM_BOT_TOKEN
 {% endhighlight PowerShell startinline %}
 
-## Setup the Facebook app
+## Connect BotMan to your Telegram bot
 
-On your [Facebook Developer site](https://developers.facebook.com) go to your app and add the Messenger product to it.
+Next we will connect the bot to our application. Since I am using Laravel Valet for my local development I can just type `valet share` in order to get a public URL for my application. Make sure to use the `https` one. If you are not using Valet you can install [ngrok](https://ngrok.com/) which Valet uses under hood too.
 
-<img class="alignnone" style="max-width: 100%; height: auto;" alt="Screenshot of how to add the Messenger product to your Facebook app" src="/assets/post-images/blog_fb_app_messenger.png" width="700" />
+To add this public URL to our bot we need to do a HTTP POST request to `https://api.telegram.org/botYOUR-BOT-TOKEN/setWebhook` and provide one field `url` which holds our public URL. Make sure to replace `YOUR-BOT-TOKEN` with your token. 👈
 
-Now you're able to create a Facebook Page Token. Just select the Facebook page, where your bot will be available, and copy the token. On your apps dashboard you will also find the Facebook App Secret. Copy it as well and put the values in your `.env` file. You can chosse the value of `FACEBOOK_VERIFICATION` yourself there. We will need that in a short.
+I am using the REST client [Insomnia](https://insomnia.rest/) for that, but you can do that with `CURL` as well.
 
-## Connect BotMan to your Facebook app
+<img class="alignnone" style="max-width: 100%; height: auto;" alt="How to setup the Telegram bot webhook" src="/assets/post-images/telegram_webhook.png" width="700" />
 
-In order to connect them we need to setup the webhook inside your Facebook app. You will find the options in the app's Messenger section like before.
-
-<img class="alignnone" style="max-width: 100%; height: auto;" alt="Screenshot of the Facebook app webhook options" src="/assets/post-images/blog_fb_app_webhook.png" width="700" />
-
-There we need to select the subscription fields, so the app knows what to send to our BotMan application and the URL where to send it to. The callback URL is your BotMan application public URL + `/botman` and the Verify Token is the one you used in your `.env` file. For us the `messages` and `messages_postbacks` fields are fine for now. When you did everything correctly your webhook should now be successfully setup.
-
-<img class="alignnone" style="max-width: 100%; height: auto;" alt="Screenshot of the webhook options" src="/assets/post-images/blog_fb_app_webhook_2.png" width="700" />
-
-<div class="note"><strong>Note:</strong> Postbacks are values that will be send when you use Buttons or other Facebook templates.</div>
-
-The `botman` endpoint of your BotMan application is already setup in BotMan Studio. This is why that works out of the box. You will the code for that in you `routes/web.php` file.
+The `botman` endpoint of your BotMan application is already setup in BotMan Studio. This is why that works out of the box. You will find the code for that in you `routes/web.php` file.
 
  {% highlight PHP startinline %}
  <?php
@@ -99,25 +99,15 @@ The `botman` endpoint of your BotMan application is already setup in BotMan Stud
 Route::match(['get', 'post'], '/botman', 'BotManController@handle'); 
  {% endhighlight PHP startinline %}
  
- <div class="note"><strong>Note:</strong> The webhook setup request is a GET request. Every other Facebook request will be a POST one. This is why we need hear for GET and POST requests.</div>
-
-After you have setup the webhook, you will be able to subscribe the app to a Facebook page. This makes sure that every message from the page will be sent through your app to your BotMan application.
-
-<img class="alignnone" style="max-width: 100%; height: auto;" alt="Screenshot showing how to subscribe to a Facebook page" src="/assets/post-images/blog_subscribe_fb_page.png" width="700" />
-
 ## Test it out
 
-Next we can test if everything is working like planned. So visit your Facebook page and send a message with just `Hi`. You should again get a reply with `Hello!`.
+Next we can test if everything is working like planned. So visit your Telegram bot, which you can find like any other users, and send a message with just `Hi`. You should again get a reply with `Hello!`.
 
-<img class="alignnone" style="max-width: 100%; height: auto;" alt="Screenshot showing a message and a reply in Facebook Messenger." src="/assets/post-images/blog_test_hi.png" width="700" />
+<img class="alignnone" style="max-width: 100%; height: auto;" alt="Screenshot showing a message and a reply in Telegrram." src="/assets/post-images/telegram_test_hi.png" width="700" />
 
-You can also write to your page through the [Messenger web app](https://www.messenger.com/). This is what I am using in the screenshot. Just search for your page there in order to write a message.
+Additionally we can test the example conversation, which is built into BotMan Studio.
 
-<div class="note"><strong>Note:</strong> While your Facebook app or page are not published, your Facebook user needs to be an admin of the page and the app in order to make it work. </div>
-
-Additionally we can test the example conversation, which is built in into BotMan Studio.
-
-<img class="alignnone" style="max-width: 100%; height: auto;" alt="Screenshot showing how to test the BotMan example conversation" src="/assets/post-images/blog_test_conv.png" width="700" />
+<img class="alignnone" style="max-width: 100%; height: auto;" alt="Screenshot showing how to test the BotMan example conversation" src="/assets/post-images/telegram_test_conv.png" width="700" />
 
 ## First custom message
 
@@ -133,8 +123,8 @@ $botman->hears('It just works', function(BotMan $botMan) {
  
 You will see that this works like a charm as well.
  
- <img class="alignnone" style="max-width: 100%; height: auto;" alt="Screenshot showing first custom bot message" src="/assets/post-images/blog_test_custom.png" width="700" />
+ <img class="alignnone" style="max-width: 100%; height: auto;" alt="Screenshot showing first custom bot message" src="/assets/post-images/telegram_test_custom.png" width="700" />
  
 ## Conclusion
  
-Although it seems quite easy to setup BotMan Studio and Facebook you still need to be aware of a view concepts regarding Facebook. I hope I could provide them there and this article helps you to setup your next Facebook Messenger chatbots. From here you are ready to build more and more features to your bot your own. So make sure to checkout the BotMan [documentation](http://botman.io/) to get a feeling of what is possible and learn new stuff.
+Although it seems quite easy to setup BotMan Studio and Telegram you still need to be aware of a view things. I hope I could provide them here and this article helps you to setup your next Telegram bots. From here you are ready to build more and more features to your bot your own. So make sure to checkout the BotMan [documentation](http://botman.io/) to get a feeling of what is possible and learn new stuff.
