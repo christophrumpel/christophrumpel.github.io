@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Build a Facebook Messenger chatbot in Laravel with BotMan Studio 2.0"
+title: "Build a Telegram chatbot in Laravel with BotMan Studio 2.0"
 article_description: "With BotMan it is really easy to setup a Facebook chatbot. This week the new 2.0 version was released. We will checkout how to setup a Facebook Messenger chatbot in this new version with BotMan Studio step by step."
 ---
 
