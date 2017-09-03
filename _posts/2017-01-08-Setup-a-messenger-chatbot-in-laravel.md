@@ -9,6 +9,8 @@ article_description: "There is a new PHP library called BotMan that makes it sup
 There is a new PHP library called <a href="https://github.com/mpociot/botman">BotMan</a> that makes it super easy to setup a Facebook Messenger chatbot in Laravel. Let's do this.
 </header>
 
+<div class="note"><strong>Note:</strong> I wrote a <a href="http://christoph-rumpel.com/2017/09/build-a-facebook-chatbot-with-botman-studio/">new article</a> about building a Facebook Messenger chatbot with Laravel and BotMan Studio 2.0.</div>
+
 ## Welcome BotMan
 
 BotMan is framework agnostic PHP library for creating chatbots. It supports multiple messenger platforms like `Telegram`, `Slack`, `Microsoft`, `Facebook` and more. It is built by [Marcel Pociot](https://twitter.com/marcelpociot) and it makes developing chatbots super easy. We are going to use it in Laravel to setup a Facebook Messenger chatbot.
