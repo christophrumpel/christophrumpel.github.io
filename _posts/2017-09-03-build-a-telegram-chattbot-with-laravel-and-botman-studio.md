@@ -127,4 +127,4 @@ You will see that this works like a charm as well.
  
 ## Conclusion
  
-Although it seems quite easy to setup BotMan Studio and Telegram you still need to be aware of a view things. I hope I could provide them here and this article helps you to setup your next Telegram bots. From here you are ready to build more and more features to your bot your own. So make sure to checkout the BotMan [documentation](http://botman.io/) to get a feeling of what is possible and learn new stuff.
+Although it seems quite easy to setup BotMan Studio and Telegram you still need to be aware of a few things. I hope I could provide them here and this article helps you to setup your next Telegram bots. From here you are ready to build more and more features to your bot your own. So make sure to checkout the BotMan [documentation](http://botman.io/) to get a feeling of what is possible and learn new stuff.
