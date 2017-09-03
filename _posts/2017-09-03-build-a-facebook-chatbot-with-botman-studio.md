@@ -137,4 +137,4 @@ You will see that this works like a charm as well.
  
 ## Conclusion
  
-Although it is quite easy to setup BotMan Studio and Facebook you still need to be aware of a view concepts regarding Facebook. I hope I could provide them there and it helps you to setup your next Facebook Messenger chatbots.
+Although it seems quite easy to setup BotMan Studio and Facebook you still need to be aware of a view concepts regarding Facebook. I hope I could provide them there and this article helps you to setup your next Facebook Messenger chatbots. From here you are ready to build more and more features to your bot your own. So make sure to checkout the BotMan [documentation](http://botman.io/) to get a feeling of what is possible and learn new stuff.
