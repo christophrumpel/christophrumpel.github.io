@@ -63,7 +63,7 @@ Next to the driver this will also add a `config/botman/facebook.php`  config fil
 
 <img class="alignnone" style="max-width: 100%; height: auto;" alt="Screenshot showing facebook botman config file" src="/assets/post-images/blog_config_file.png" width="700" />
 
-In order to connect our BotMan application to a Facebook app and page we need these env values:
+In order to connect our BotMan application to a Facebook app and page we need these env values: (we will add them later)
 
 {% highlight PowerShell startinline %}
 FACEBOOK_TOKEN=YOUR_APP_FACEBOOK_PAGE_TOKEN
@@ -77,7 +77,7 @@ On your [Facebook Developer site](https://developers.facebook.com) go to your ap
 
 <img class="alignnone" style="max-width: 100%; height: auto;" alt="Screenshot of how to add the Messenger product to your Facebook app" src="/assets/post-images/blog_fb_app_messenger.png" width="700" />
 
-Now you're able to create a Facebook Page Token. Just select the Facebook page, where your bot will be available, and copy the token. On your apps dashboard you will also find the Facebook App Secret. Copy it as well and put the values in your `.env` file. You can chosse the value of `FACEBOOK_VERIFICATION` yourself there. We will need that in a short.
+Now you're able to create a Facebook Page Token. (= FACEBOOK_TOKEN from BotMan) Just select the Facebook page, where your bot will be available, and copy the token. On your apps dashboard you will also find the Facebook App Secret. Copy it as well and put the values in your `.env` file. You can chosse the value of `FACEBOOK_VERIFICATION` yourself there. We will need that in a short. Now all your .env Facebook values should be filled.
 
 ## Connect BotMan to your Facebook app
 
@@ -85,7 +85,9 @@ In order to connect them we need to setup the webhook inside your Facebook app. 
 
 <img class="alignnone" style="max-width: 100%; height: auto;" alt="Screenshot of the Facebook app webhook options" src="/assets/post-images/blog_fb_app_webhook.png" width="700" />
 
-There we need to select the subscription fields, so the app knows what to send to our BotMan application and the URL where to send it to. The callback URL is your BotMan application public URL + `/botman` and the Verify Token is the one you used in your `.env` file. For us the `messages` and `messages_postbacks` fields are fine for now. When you did everything correctly your webhook should now be successfully setup.
+There we need to select the subscription fields, so the app knows what to send to our BotMan application and the URL where to send it to. The callback URL (= webhook) is your BotMan application public URL + `/botman` and the Verify Token is the one you used in your `.env` file. For us the `messages` and `messages_postbacks` fields are fine for now. When you did everything correctly your webhook should now be successfully setup.
+
+<div class="note"><strong>Note:</strong> If not, you will see a red "x" icon at the right of your Callback URL field. This means that the Facebook webook test request was not successful. Most of the times this is because the URL or the FACEBOOK_VERIFICATION is wrong. So please check them again. Also make sure that the URL is publicly reachable.</div>
 
 <img class="alignnone" style="max-width: 100%; height: auto;" alt="Screenshot of the webhook options" src="/assets/post-images/blog_fb_app_webhook_2.png" width="700" />
 
