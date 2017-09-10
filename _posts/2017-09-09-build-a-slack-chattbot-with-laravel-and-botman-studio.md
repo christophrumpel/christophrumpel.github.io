@@ -30,6 +30,8 @@ After that you can just install a new instance like that:
 botman new botman-Slack
 {% endhighlight PowerShell startinline %}
 
+<div class="note"><strong>Note:</strong> Make sure you have at least botman/botman 2.0.3 installed. This is important due to a bugfix.</div>
+
 It is basically like the Laravel Installer. Your application is now already installed. When you use Laravel Valet you can directly check the homepage, `botman-slack.dev` in my case. Here you will see the BotMan Studio welcome page.
 
 <img class="alignnone" style="max-width: 100%; height: auto;" alt="Screenshot of the BotMan welcome page" src="/assets/post-images/blog_homepage.png" width="700" />
