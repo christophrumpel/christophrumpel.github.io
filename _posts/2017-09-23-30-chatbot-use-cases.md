@@ -18,7 +18,7 @@ Hopefully you already know what a chatbot is. Just in the case, you do no know, 
 
 <blockquote>You just need to think of a chatbot as a new interface to use your application.<blockquote>
 
-So instead of having a website or app with information where you can look for the one thing you need, you get a chat interface that you can write or talk to. The chatbot is the service connected to this chat interface. It will try to help you with your needs in a conversational way. While a chatbot could theoretically help you with all kind of tasks, not everyone already works great right now.  Today I want to show you 10 use-cases for chatbots that could already bring benefits to you or your company today.
+So instead of having a website or app with information where you can look for the one thing you need, you get a chat interface that you can write or talk to. The chatbot is the service connected to this chat interface. It will try to help you with your needs in a conversational way. While a chatbot could theoretically help you with all kind of tasks, not everyone already works great right now.  Today I want to show you 8 use-cases for chatbots that could already bring benefits to you or your company today.
 
 ## 1. News subscription
 
