@@ -9,14 +9,11 @@ article_description: "While lots of people already know about what a chatbot is,
 While lots of people already know about what a chatbot is, many still have problems to think of use-cases for it. This is something I want to change today.
 </header>
 
-<blockquote class="twitter-tweet" data-lang="de"><p lang="en" dir="ltr">What are some things you are using chat bots for?</p>&mdash; Jacob Bennett (@JacobBennett) <a href="https://twitter.com/JacobBennett/status/905765094067499012?ref_src=twsrc%5Etfw">7. September 2017</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
 ## Overview
 
-Hopefully you already know what a chatbot is. Just in the case, you do no know, here is a short explanation. My friend Marcel Mpociot likes to put it like this:
+Hopefully you already know what a chatbot is. Just in the case, you don't, here is a short explanation. My friend Marcel Mpociot likes to put it like this:
 
-<blockquote>You just need to think of a chatbot as a new interface to use your application.<blockquote>
+<blockquote>You just need to think of a chatbot as a new interface to use your application.</blockquote>
 
 So instead of having a website or app with information where you can look for the one thing you need, you get a chat interface that you can write or talk to. The chatbot is the service connected to this chat interface. It will try to help you with your needs in a conversational way. While a chatbot could theoretically help you with all kind of tasks, not everyone already works great right now.  Today I want to show you 8 use-cases for chatbots that could already bring benefits to you or your company today.
 
