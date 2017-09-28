@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "8 chatbot use-cases for you and your company"
+title: "8 chatbot use-cases for you and your company that actually work today"
 article_description: "While lots of people already know about what a chatbot is, many still have problems to think of use-cases for it. This is something I want to change today."
 ---
 
