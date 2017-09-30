@@ -11,11 +11,11 @@ While lots of people already know about what a chatbot is, many still have probl
 
 ## Overview
 
-Hopefully you already know what a chatbot is. Just in the case, you don't, here is a short explanation. My friend Marcel Mpociot likes to put it like this:
+Hopefully you already know what a chatbot is. Just in the case, you don't, here is a short explanation. My friend Marcel Pociot likes to put it like this:
 
 <blockquote>You just need to think of a chatbot as a new interface to use your application.</blockquote>
 
-So instead of having a website or app with information where you can look for the one thing you need, you get a chat interface that you can write or talk to. The chatbot is the service connected to this chat interface. It will try to help you with your needs in a conversational way.
+So instead of having a website or app with information where you can look for the one thing you need, you get a chat interface that you can write or talk to - and even have UI patterns like menus, buttons and dialogues. The chatbot is the service connected to this chat interface. It will try to help you with your needs in a conversational way.
 
 <img class="alignnone" style="max-width: 100%; height: auto;" alt="Telegram chat interface" src="/assets/post-images/telegram_hello.png" width="700" />
 
@@ -23,7 +23,7 @@ While a chatbot could theoretically help you with all kind of tasks, not all of 
 
 ## 1. News subscription
 
-Your chatbot is an information channel where you can receive all kind of news. This is especially interesting for bots on the big Messenger services like Facebook. Since you already spent a lot of your time on this service, it makes sense to receive information there. This communication also works just one way. So it is not necessary that you can reply to the bot too. There are dozens of newspapers companies out there that already provide such chatbots like: [TechCrunch](https://www.messenger.com/t/8062627951), [Der Standard](https://www.messenger.com/t/122737471962), [Washington Post](https://www.messenger.com/t/15225899564), [The Guardian](https://www.messenger.com/t/10513336322) ...
+Your chatbot is an information channel where you can receive all kind of news. This is especially interesting for bots on the big Messenger services like Facebook. Since you already spend a lot of your time on this service, it makes sense to receive information there. This communication also works just one way. So it is not necessary that you can reply to the bot too. There are dozens of newspapers companies out there that already provide such chatbots like: [TechCrunch](https://www.messenger.com/t/8062627951), [Der Standard](https://www.messenger.com/t/122737471962), [Washington Post](https://www.messenger.com/t/15225899564), [The Guardian](https://www.messenger.com/t/10513336322) ...
 
 But there is more. In Austria we have the "ORF Wahlbot" which provides live information during election times, which is very useful. I am also a big fan of the Austrian chatbot [RecordBird](https://www.messenger.com/t/RecordBird) which gets you connected to the latest news from your favourite musicians. Every time there is a new album, song, video or interview, you will be one of the firsts to know about it. It helps me to be always up to date with one of my favourite bands: Paramore :-) 🤘
 
