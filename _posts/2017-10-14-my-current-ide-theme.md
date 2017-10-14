@@ -35,6 +35,18 @@ I also like to have little bigger font size and line height. This is a screensho
 
 <img class="alignnone" style="max-width: 100%; height: auto;" alt="Theme font settings" src="/assets/post-images/theme_font_settings.png" width="700" />
 
+## The terminal
+
+Like seen in the screenhots I am using the PhpStorm built-in terminal. The colors used are the ones from the Dracula theme as well.
+
+<img class="alignnone" style="max-width: 100%; height: auto;" alt="Theme console color settings" src="/assets/post-images/theme_console_colors.png" width="700" />
+
+But behind the colors I am still using the [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh) theme [agnoster](https://github.com/robbyrussell/oh-my-zsh/wiki/themes#agnoster). It has a nice prompt.
+
+Here is another screenshot showing the nice little prompt details.
+
+<img class="alignnone" style="max-width: 100%; height: auto;" alt="Screenshot agnoster details" src="/assets/post-images/theme_agnoster.png" width="700" />
+
 ## Conclusion
 
 This is what my new theme looks like and I really love it. I also want to keep my PhpStorm look as minimal as possible because that's what I liked about Sublime Text before. For me this is now a perfection combination of a useful and beautiful IDE. Let me know about your themes too.
